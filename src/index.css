@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'OpenSauce';
+  src: local('OpenSauceTwo'), url(./fonts/OpenSauceTwo-Regular.woff);
+  src: local('OpenSauceTwo-SemiBold'), url(./fonts/OpenSauceTwo-SemiBold.woff);
+}
+
+.contact_form .form_control {
+  padding: 1.375rem .75rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #0a2c02;
+  border-radius: 0 !important;
+  border: 1px solid #fff;
+}
+
+.contact_form input.form-control {
+  margin-bottom: 2em;
+  height: calc(2.5em + .75em + 2px);
+}
+
+.btn {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn:hover{
+  color: #fff;
+}
