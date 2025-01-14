@@ -82,7 +82,7 @@ export default function Home() {
           <h1>Documents</h1>
           <>
             <Document file={'fea6_ProjectReport_2024.pdf'}>
-              <Page pageNumber={1} scale={0.3} canvasBackground="#ccc"/>
+              <Page pageNumber={1} scale={0.3}/>
             </Document>
               <p>
                 Dissertation Paper <button className={styles.minor}><Image src="/download.svg" width={20} height={20} alt="Download"/></button>
