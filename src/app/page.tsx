@@ -38,6 +38,32 @@ export default function Home() {
                 alt="LinkedIn"
               />
             </Link>
+            <Link
+              className={styles.minor}
+              href="https://github.com/fandrademay"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/github-mark-white.svg"
+                width={20}
+                height={20}
+                alt="GitHub"
+              />
+            </Link>
+            <Link
+              className={styles.minor}
+              href="https://www.felixam.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/home.svg"
+                width={20}
+                height={20}
+                alt="Home"
+              />
+            </Link>
 
           </div>
         </div>
@@ -48,9 +74,6 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className={styles.footer}>
-        This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
-      </footer>
     </div>
   );
 }

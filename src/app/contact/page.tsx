@@ -9,9 +9,21 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.header}>
           <div className={styles.ctas}>
-            <Link className={styles.primary} href="/" prefetch={true} replace={true}>Home</Link>
+            <Link className={styles.primary} href="/contact" prefetch={true} replace={true}>Contact</Link>
             
-            <Link className={styles.secondary} href="/documents" prefetch={true} replace={true}>Documents</Link>
+            <Link className={styles.secondary}
+              href="/documents"
+              prefetch={true}
+              replace={true}
+            >
+              <Image
+                src="/file.svg"
+                width={20}
+                height={20}
+                alt="documents"
+              />
+              Documents
+            </Link>
             
             <Link
               className={styles.minor}
@@ -26,19 +38,28 @@ export default function Home() {
                 alt="LinkedIn"
               />
             </Link>
+            <Link
+              className={styles.minor}
+              href="https://github.com/fandrademay"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/github-mark-white.svg"
+                width={20}
+                height={20}
+                alt="GitHub"
+              />
+            </Link>
 
           </div>
         </div>
         
         <div className={styles.main}>
           <h1>Contact</h1>
-          <p>f.andrademay@gmail.com</p>
         </div>
 
       </main>
-      <footer className={styles.footer}>
-        This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
-      </footer>
     </div>
   );
 }

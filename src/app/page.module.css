@@ -110,20 +110,29 @@ a.secondary:hover {
 
 a.minor {
   border-color: #f0b165;
+  float: right;
 }
 
 a.minor:hover {
   background-color: #f0b165;
 }
 
-
 .header {
   grid-row-start: 3;
-  display: flex;
+  display: grid;
   gap: 5px;
   position: absolute;
-  left: 16px;
   top: 16px;
+  left: 16px;
+  right: 16px;
+  width: auto;
+}
+
+.header a.minor{
+  position: relative;
+  right:0px;
+  top: 0px;
+  gap: 8px
 }
 
 .header a {
