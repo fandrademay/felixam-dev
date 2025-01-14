@@ -16,25 +16,6 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function Home() {
-  // const [numPages, setNumPages] = useState<number>(0);
-  const [pageNumber, setPageNumber] = useState<number>(1);
-
-  function onDocumentLoadSuccess(): void {
-    setPageNumber(1)
-  }
-
-  // function changePage(offset: number) {
-  //   setPageNumber(prevPageNumber => prevPageNumber + offset);
-  // }
-
-  // function previousPage() {
-  //   changePage(-1);
-  // }
-
-  // function nextPage() {
-  //   changePage(1);
-  // }
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -100,12 +81,8 @@ export default function Home() {
         <div className={styles.main}>
           <h1>Documents</h1>
           <>
-            <Document
-            file={'fea6_ProjectReport_2024.pdf'}
-            onLoadSuccess={onDocumentLoadSuccess}
-            
-            >
-              <Page pageNumber={pageNumber} scale={0.3} canvasBackground="#ccc"/>
+            <Document file={'fea6_ProjectReport_2024.pdf'}>
+              <Page pageNumber={1} scale={0.3} canvasBackground="#ccc"/>
             </Document>
               <p>
                 Dissertation Paper <button className={styles.minor}><Image src="/download.svg" width={20} height={20} alt="Download"/></button>
