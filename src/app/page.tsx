@@ -11,7 +11,19 @@ export default function Home() {
           <div className={styles.ctas}>
             <Link className={styles.primary} href="/contact" prefetch={true} replace={true}>Contact</Link>
             
-            <Link className={styles.secondary} href="/documents" prefetch={true} replace={true}>Documents</Link>
+            <Link className={styles.secondary}
+              href="/documents"
+              prefetch={true}
+              replace={true}
+            >
+              <Image
+                src="/file.svg"
+                width={20}
+                height={20}
+                alt="documents"
+              />
+              Documents
+            </Link>
             
             <Link
               className={styles.minor}
