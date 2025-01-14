@@ -16,17 +16,17 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function Home() {
-  const [numPages, setNumPages] = useState<number>(0);
+  // const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    setNumPages(numPages);
+    // setNumPages(numPages);
     setPageNumber(1)
   }
 
-  function changePage(offset: number) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
-  }
+  // function changePage(offset: number) {
+  //   setPageNumber(prevPageNumber => prevPageNumber + offset);
+  // }
 
   // function previousPage() {
   //   changePage(-1);
