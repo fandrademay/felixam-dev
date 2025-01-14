@@ -1,5 +1,8 @@
 import "./globals.css";
 import styles from "./page.module.css";
+import * as pdfjsLib from "pdfjs-dist";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
 
 export default function RootLayout({
   children,

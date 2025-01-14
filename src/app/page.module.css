@@ -81,9 +81,9 @@
   border: none;
   border: 1px solid transparent;
   transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -221,4 +221,24 @@ a.minor:hover {
   .logo {
     filter: invert();
   }
+}
+
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  width: 80% !important;
+  height: 100% !important;
+  appearance: none;
+  border-radius: 128px;
+  padding: 0 20px;
+  border: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
 }

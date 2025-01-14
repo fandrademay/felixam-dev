@@ -10,10 +10,16 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.9.3",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@wojtekmaj/react-hooks": "^1.21.0",
     "next": "15.1.4",
+    "pdfjs": "^2.5.3",
     "pnpm": "^9.15.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-pdf": "^9.2.1",
+    "react-pdf-viewer": "^0.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

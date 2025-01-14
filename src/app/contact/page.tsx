@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className={styles.header}>
+      <div className={styles.header}>
           <div className={styles.ctas}>
             <Link className={styles.primary} href="/contact" prefetch={true} replace={true}>Contact</Link>
             
@@ -51,12 +51,24 @@ export default function Home() {
                 alt="GitHub"
               />
             </Link>
+            <Link
+              className={styles.minor}
+              href="https://felixam.dev"
+            >
+              <Image
+                src="/home.svg"
+                width={20}
+                height={20}
+                alt="Home"
+              />
+            </Link>
 
           </div>
         </div>
         
         <div className={styles.main}>
           <h1>Contact</h1>
+          <p>Email: f.andrademay@gmail.com</p>
         </div>
 
       </main>

@@ -53,9 +53,7 @@ export default function Home() {
             </Link>
             <Link
               className={styles.minor}
-              href="https://www.felixam.dev"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://felixam.dev"
             >
               <Image
                 src="/home.svg"
