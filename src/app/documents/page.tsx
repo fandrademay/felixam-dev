@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "../page.module.css";
 import '../fonts.css';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
