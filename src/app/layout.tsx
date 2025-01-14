@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import styles from "./page.module.css";
 
