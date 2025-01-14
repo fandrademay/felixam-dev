@@ -19,8 +19,7 @@ export default function Home() {
   // const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
 
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    // setNumPages(numPages);
+  function onDocumentLoadSuccess(): void {
     setPageNumber(1)
   }
 
