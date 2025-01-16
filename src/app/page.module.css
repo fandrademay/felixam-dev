@@ -75,7 +75,7 @@
 
 .ctas a {
   appearance: none;
-  border-radius: 128px;
+  border-radius: 64px;
   height: 48px;
   padding: 0 20px;
   border: none;
@@ -157,23 +157,32 @@ a.other:hover {
 }
 
 a.pdf_button {
-  border-color: #f0b165;
+  border-color:#f0b165;
+  background-color: #5884E7;
+  border-radius: 6px;
+  height: 400px;
+  width: 250px;
   color: #fff;
+  display: grid;
   gap: 16px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  text-align: center;
 }
 
 a.pdf_button:hover {
-  background-color: #5884E7;
   border-color: #f0b165;
+  background-color: #f0b165;
   color: #ffffff;
+  gap: 16px;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
 }
 
-a.pdf_button.pdf_preview {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-
+.container {
+  display: inline-block;
 }
 
 .header {

@@ -16,15 +16,15 @@ export default function Home() {
               rel="noopener noreferrer"
               download
             >
-              <div className={styles.pdf_preview}>
+              <div className={styles.container}>
                 <Image
                   src="/fea6-ProjectReport-2024-cover.png"
-                  width={1060/4}
-                  height={1498/4}
+                  width={219}
+                  height={307}
                   alt="fea6_ProjectReport_2024_cover.png"
                 />
               </div>
-              <>
+              <div className={styles.container}>
                 <Image
                   src="download.svg"
                   width={20}
@@ -32,7 +32,7 @@ export default function Home() {
                   alt="Download Dissertation"
                 />
                 Download Dissertation
-              </>
+              </div>
             </Link>
           </div>
       </div>
