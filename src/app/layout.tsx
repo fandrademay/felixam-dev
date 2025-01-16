@@ -39,7 +39,7 @@ export default function RootLayout({
                   prefetch={true}
                   replace={true}
                 >
-                  <Image
+                  <Image className={styles.white_inverting}
                     src="/file.svg"
                     width={20}
                     height={20}

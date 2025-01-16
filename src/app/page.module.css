@@ -117,6 +117,36 @@ a.minor:hover {
   background-color: #f0b165;
 }
 
+a.minor .white_inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: 
+    brightness(0) 
+    saturate(100%) 
+    invert(77%) 
+    sepia(42%) 
+    saturate(657%) 
+    hue-rotate(332deg) 
+    brightness(97%) 
+    contrast(94%);
+}
+/* for the SVG */
+a.minor:hover .white_inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter:
+    invert(89%) 
+    sepia(100%) 
+    saturate(46%) 
+    hue-rotate(326deg) 
+    brightness(111%) 
+    contrast(111%);
+}
+
 a.other {
   border-color: #f0b165;
   float: right;
@@ -126,6 +156,25 @@ a.other:hover {
   background-color: #f0b165;
 }
 
+a.pdf_button {
+  border-color: #f0b165;
+  color: #fff;
+  gap: 16px;
+}
+
+a.pdf_button:hover {
+  background-color: #5884E7;
+  border-color: #f0b165;
+  color: #ffffff;
+}
+
+a.pdf_button.pdf_preview {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+
+}
 
 .header {
   grid-row-start: 3;
@@ -136,6 +185,7 @@ a.other:hover {
   left: 16px;
   right: 16px;
   width: auto;
+  font-family: spaceGrotesk;
 }
 
 .header a.other{
@@ -231,24 +281,4 @@ a.other:hover {
   .logo {
     filter: invert();
   }
-}
-
-.react-pdf__Page__canvas {
-  margin: 0 auto;
-  width: 80% !important;
-  height: 100% !important;
-  appearance: none;
-  border-radius: 128px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.1s,
-    color 0.1s,
-    border-color 0.1s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 20px;
 }

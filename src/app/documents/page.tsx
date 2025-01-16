@@ -1,22 +1,7 @@
-'use client';
-
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../page.module.css";
 import '../fonts.css';
-
-// import React from 'react';
-// import { Document, Page } from 'react-pdf';
-// import { pdfjs } from 'react-pdf';
-// import 'react-pdf/dist/Page/TextLayer.css';
-// import 'react-pdf/dist/Page/AnnotationLayer.css';
-
-// import dissPDF from 'https://github.com/fandrademay/majorproject/blob/main/submission/fea6_ProjectReport_2024.pdf'
-
-// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-
-const aspect_ratio = 1,
-    size = 15;
 
 export default function Home() {
   return (
@@ -26,19 +11,28 @@ export default function Home() {
           <div className={styles.ctas}>
             <Link
               href={'fea6_ProjectReport_2024.pdf'}
-              className={styles.major}
+              className={styles.pdf_button}
               target="_blank"
               rel="noopener noreferrer"
               download
             >
-              <Image
-                src="download.svg"
-                width={aspect_ratio * size}
-                height={size}
-                className='pt-2'
-                alt="Download Dissertation"
-              />
-              <span className="ml-4 ">Dissertation</span>
+              <div className={styles.pdf_preview}>
+                <Image
+                  src="/fea6-ProjectReport-2024-cover.png"
+                  width={1060/4}
+                  height={1498/4}
+                  alt="fea6_ProjectReport_2024_cover.png"
+                />
+              </div>
+              <>
+                <Image
+                  src="download.svg"
+                  width={20}
+                  height={20}
+                  alt="Download Dissertation"
+                />
+                Download Dissertation
+              </>
             </Link>
           </div>
       </div>
