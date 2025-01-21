@@ -2,11 +2,10 @@ import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import * as pdfjsLib from "pdfjs-dist";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+// import { slide as Menu } from "next-burger-menu"
 
-export default function RootLayout({
+export default function RootLayout(this: any, {
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -88,6 +87,13 @@ export default function RootLayout({
                   />
                 </Link>
               </div>
+
+              {/* <Menu>
+                <Link id="home" className="menu-item" href="/">Home</Link>
+                <Link id="about" className="menu-item" href="/about">About</Link>
+                <Link id="contact" className="menu-item" href="/contact">Contact</Link>
+                <Link onClick={ this.showSettings } className="menu-item--small" href="">Settings</Link>
+              </Menu> */}
             </div>
           </main>
         {/* </div> */}

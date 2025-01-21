@@ -258,7 +258,7 @@ a.pdf_button:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px ) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
@@ -291,10 +291,211 @@ a.pdf_button:hover {
     align-items: center;
     justify-content: center;
   }
+
+  .ctas {
+    display: none;
+  }
+}
+
+.burger_ctas a {
+  appearance: none;
+  border-radius: 64px;
+  height: 48px;
+  padding: 0 20px;
+  border: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+a.major {
+  border-color: #f0b165;
+  background: #f0b165;
+  color: #000;
+  gap: 8px;
+}
+
+a.major:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #000;
+}
+
+a.minor{
+  border-color: #f0b165;
+  min-width: 125px;
+}
+
+a.minor:hover {
+  border-color: #f0b165;
+  color: #000;
+  background-color: #f0b165;
+}
+
+a.minor .white_inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: 
+    brightness(0) 
+    saturate(100%) 
+    invert(77%) 
+    sepia(42%) 
+    saturate(657%) 
+    hue-rotate(332deg) 
+    brightness(97%) 
+    contrast(94%);
+}
+/* for the SVG */
+a.minor:hover .white_inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter:
+    invert(89%) 
+    sepia(100%) 
+    saturate(46%) 
+    hue-rotate(326deg) 
+    brightness(111%) 
+    contrast(111%);
+}
+
+a.other {
+  border-color: #f0b165;
+  float: right;
+}
+
+a.other:hover {
+  background-color: #f0b165;
+}
+
+a.pdf_button {
+  border-color:#f0b165;
+  background-color: #5884E7;
+  border-radius: 6px;
+  height: 400px;
+  width: 250px;
+  color: #fff;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+
+a.pdf_button:hover {
+  border-color: #f0b165;
+  background-color: #f0b165;
+  color: #ffffff;
+  gap: 16px;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+}
+
+@media ( max-width: 599px ) {
+  .burger_ctas {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .burger_ctas {
+    display: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
   }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

@@ -15,22 +15,27 @@
     "@wojtekmaj/react-hooks": "^1.21.0",
     "n": "^10.1.0",
     "next": "15.1.4",
+    "next-burger-menu": "^1.1.0",
     "pdfjs": "^2.5.3",
     "pdfjs-dist": "^3.11.174",
-    "pnpm": "^9.15.3",
+    "pnpm": "^9.15.4",
+    "process": "^0.11.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-pdf": "^9.2.1",
-    "react-pdf-viewer": "^0.1.0"
+    "react-pdf": "^9.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/pdfjs-dist": "^2.10.377",
     "@types/react": "^19",
+    "@types/react-burger-menu": "^2.8.7",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
+    "mini-css-extract-plugin": "^2.9.2",
+    "react-burger-menu": "^3.1.0",
+    "trim-newlines": "^5.0.0",
     "typescript": "^5"
   }
 }
