@@ -233,6 +233,13 @@ a.pdf_button:hover {
   flex-shrink: 0;
 }
 
+.email_link {
+  padding: 6px;
+}
+.email_link a:hover {
+  text-decoration:underline;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {

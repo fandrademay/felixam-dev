@@ -6,7 +6,10 @@ export default function Home() {
     <div className={styles.page}>      
       <div className={styles.main}>
         <h1>Contact</h1>
-        <p>Email: f.andrademay@gmail.com</p>
+          <div className={styles.email_link}>
+            <h2>Email:</h2> 
+            <a href="mailto:f.andrademay@gmail.com">f.andrademay@gmail.com</a>
+          </div>
       </div>
     </div>
   );
