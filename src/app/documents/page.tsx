@@ -29,11 +29,38 @@ export default function Home() {
                   src="download.svg"
                   width={20}
                   height={20}
-                  alt="Download Dissertation"
+                  alt="Download"
                 />
                 Download Dissertation
               </div>
             </Link>
+
+            <Link
+              href={'FelixAM_cv.pdf'}
+              className={styles.pdf_button}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <div className={styles.container}>
+                <Image
+                  src="/FelixAM-CV-cover.png"
+                  width={219}
+                  height={307}
+                  alt="FelixAM-CV-cover.png"
+                />
+              </div>
+              <div className={styles.container}>
+                <Image
+                  src="download.svg"
+                  width={20}
+                  height={20}
+                  alt="Download"
+                />
+                Download CV
+              </div>
+            </Link>
+            
           </div>
       </div>
     </div>
