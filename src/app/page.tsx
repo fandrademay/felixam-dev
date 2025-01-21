@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.main}>
-        <h1>Felix Andrade May</h1>
+        <h1>Felix Andrade May D</h1>
         <p>A Computer Science Graduate of Aberystwyth University</p>
       </div>
     </div>

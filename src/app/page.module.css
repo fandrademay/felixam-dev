@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'spaceGrotesk';
   src: url('../fonts/SpaceGrotesk[wght].woff2');
@@ -118,7 +117,7 @@ a.minor:hover {
   background-color: #f0b165;
 }
 
-a.minor .white_inverting{
+a.minor .inv{
   transition:
     background 0.1s,
     color 0.1s,
@@ -134,7 +133,7 @@ a.minor .white_inverting{
     contrast(94%);
 }
 /* for the SVG */
-a.minor:hover .white_inverting {
+a.minor:hover .inv {
   transition:
     background 0.1s,
     color 0.1s,
@@ -342,7 +341,7 @@ a.minor:hover {
   background-color: #f0b165;
 }
 
-a.minor .white_inverting{
+a.minor .inv{
   transition:
     background 0.1s,
     color 0.1s,
@@ -358,7 +357,7 @@ a.minor .white_inverting{
     contrast(94%);
 }
 /* for the SVG */
-a.minor:hover .white_inverting {
+a.minor:hover .inv {
   transition:
     background 0.1s,
     color 0.1s,

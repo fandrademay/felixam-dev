@@ -1,24 +1,26 @@
-import "./globals.css";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar"
+
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "../app/page.module.css";
 
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
-
-export default function RootLayout(this: any, {
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// Menu items.
+export function AppSidebar() {
   return (
-    <html lang="en">
-      <body>
-        <SidebarProvider>
-          <main className={styles.main}>
-            <div className={styles.header}>
-              <SidebarProvider> <AppSidebar/> <SidebarTrigger /> </SidebarProvider>
-              <div className={styles.ctas}> 
+    <Sidebar>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent className={styles.burger_ctas}>
+            <ul>
                 <Link className={styles.major} href="/contact" prefetch={true} replace={true}>
                   <Image src="/contact.svg" width={20} height={20} alt="Contact"/>
                   Contact
@@ -42,18 +44,10 @@ export default function RootLayout(this: any, {
                       target="_blank" rel="noopener noreferrer">
                   <Image src="/github-mark-white.svg" width={20} height={20} alt="GitHub"/>
                 </Link>
-              </div>
-            </div>
-          </main>
-
-          {children}
-                
-
-          <footer className={styles.footer}>
-            This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
-          </footer>
-        </SidebarProvider>
-      </body>
-    </html>
-  );
+            </ul>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+  )
 }
