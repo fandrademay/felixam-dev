@@ -14,10 +14,9 @@ export default function RootLayout(this: any, {
   return (
     <html lang="en">
       <body>
-        <SidebarProvider>
           <main className={styles.main}>
             <div className={styles.header}>
-              <SidebarProvider> <AppSidebar/> <SidebarTrigger /> </SidebarProvider>
+              {/* <SidebarProvider> <AppSidebar/> <SidebarTrigger /> </SidebarProvider> */}
               <div className={styles.ctas}> 
                 <Link className={styles.major} href="/contact" prefetch={true} replace={true}>
                   <Image src="/contact.svg" width={20} height={20} alt="Contact"/>
@@ -52,7 +51,6 @@ export default function RootLayout(this: any, {
           <footer className={styles.footer}>
             This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
           </footer>
-        </SidebarProvider>
       </body>
     </html>
   );

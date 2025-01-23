@@ -4,12 +4,12 @@
 }
 
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --dark-blue: #060f37;
+  --light-blue: var(--light-blue);
+  --yellow: #f0b165;
 
   --button-primary-hover: #ccc;
-  --button-secondary-hover: #f0b165;
+  --button-secondary-hover: var(--yellow);
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -28,7 +28,7 @@
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
     --button-primary-hover: #ccc;
-    --button-secondary-hover: #f0b165;
+    --button-secondary-hover: var(--yellow);
   }
 } */
 
@@ -94,8 +94,8 @@
 }
 
 a.major {
-  border-color: #f0b165;
-  background: #f0b165;
+  border-color: var(--yellow);
+  background: var(--yellow);
   color: #000;
   gap: 8px;
 }
@@ -107,14 +107,14 @@ a.major:hover {
 }
 
 a.minor{
-  border-color: #f0b165;
+  border-color: var(--yellow);
   min-width: 125px;
 }
 
 a.minor:hover {
-  border-color: #f0b165;
+  border-color: var(--yellow);
   color: #000;
-  background-color: #f0b165;
+  background-color: var(--yellow);
 }
 
 a.minor .inv{
@@ -148,17 +148,17 @@ a.minor:hover .inv {
 }
 
 a.other {
-  border-color: #f0b165;
+  border-color: var(--yellow);
   float: right;
 }
 
 a.other:hover {
-  background-color: #f0b165;
+  background-color: var(--yellow);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #5884E7;
+  border-color:var(--yellow);
+  background-color: var(--light-blue);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -171,8 +171,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--yellow);
+  background-color: var(--yellow);
   color: #ffffff;
   gap: 16px;
   transition:
@@ -295,6 +295,7 @@ a.pdf_button:hover {
   .ctas {
     display: none;
   }
+  
 }
 
 .burger_ctas a {
@@ -318,8 +319,8 @@ a.pdf_button:hover {
 }
 
 a.major {
-  border-color: #f0b165;
-  background: #f0b165;
+  border-color: var(--yellow);
+  background: var(--yellow);
   color: #000;
   gap: 8px;
 }
@@ -331,14 +332,14 @@ a.major:hover {
 }
 
 a.minor{
-  border-color: #f0b165;
+  border-color: var(--yellow);
   min-width: 125px;
 }
 
 a.minor:hover {
-  border-color: #f0b165;
+  border-color: var(--yellow);
   color: #000;
-  background-color: #f0b165;
+  background-color: var(--yellow);
 }
 
 a.minor .inv{
@@ -372,17 +373,17 @@ a.minor:hover .inv {
 }
 
 a.other {
-  border-color: #f0b165;
+  border-color: var(--yellow);
   float: right;
 }
 
 a.other:hover {
-  background-color: #f0b165;
+  background-color: var(--yellow);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #5884E7;
+  border-color:var(--yellow);
+  background-color: var(--light-blue);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -395,8 +396,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--yellow);
+  background-color: var(--yellow);
   color: #ffffff;
   gap: 16px;
   transition:
