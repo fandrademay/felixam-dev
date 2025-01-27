@@ -23,7 +23,7 @@ export default function Home() {
             <Link href={'FelixAM_cv.pdf'} className={styles.pdf_button} 
                   target="_blank" rel="noopener noreferrer" download>
               <div className={styles.container}>
-                <Image src="/FelixAM-CV-cover.png" width={219} height={307} alt="FelixAM-CV-cover.png"/>
+                <Image src="/FelixAM-cv-cover.png" width={219} height={307} alt="FelixAM-cv-cover.png"/>
               </div>
               <div className={styles.container}>
                 <Image src="download.svg" width={20} height={20} alt="Download"/>
@@ -60,7 +60,7 @@ export default function Home() {
               <Link href={'FelixAM_cv.pdf'} className={styles.pdf_button} 
                     target="_blank" rel="noopener noreferrer" download>
                 <div className={styles.container}>
-                  <Image src="/FelixAM-CV-cover.png" width={219} height={307} alt="FelixAM-CV-cover.png"/>
+                  <Image src="/FelixAM-cv-cover.png" width={219} height={307} alt="FelixAM-cv-cover.png"/>
                 </div>
                 <div className={styles.container}>
                   <Image src="download.svg" width={20} height={20} alt="Download"/>
