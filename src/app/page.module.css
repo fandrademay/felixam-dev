@@ -181,6 +181,11 @@ a.pdf_button:hover {
     border-color 0.1s;
 }
 
+.container {
+  display: inline-block;
+  align-items: center;
+}
+
 .ctas_mobile {
   display: flex;
   gap: 16px;
@@ -207,9 +212,7 @@ a.pdf_button:hover {
 }
 
 
-.container {
-  display: inline-block;
-}
+
 
 .header {
   grid-row-start: 3;

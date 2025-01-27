@@ -30,6 +30,17 @@ export default function Home() {
                 Download CV
               </div>
             </Link>
+
+            <Link href={'cbi-report.pdf'} className={styles.pdf_button}
+                  target="_blank" rel="noopener noreferrer" download>
+              <div className={styles.container}>
+                <Image src="/cbi-report-cover.png" width={219} height={307} alt="cbi-report-cover.png"/>
+              </div>
+              <div className={styles.container}>
+                <Image src="download.svg" width={20} height={20} alt="Download"/>
+                Download Paper
+              </div>
+            </Link>
             
           </div>
 
@@ -56,8 +67,18 @@ export default function Home() {
                   Download CV
                 </div>
               </Link>
+
+              <Link href={'cbi-report.pdf'} className={styles.pdf_button}
+                  target="_blank" rel="noopener noreferrer" download>
+                <div className={styles.container}>
+                  <Image src="/cbi-report-cover.png" width={219} height={307} alt="cbi-report-cover.png"/>
+                </div>
+                <div className={styles.container}>
+                  <Image src="download.svg" width={20} height={20} alt="Download"/>
+                  Download Paper
+                </div>
+              </Link>
             </div>
-            
           </div>
       </div>
     </div>
