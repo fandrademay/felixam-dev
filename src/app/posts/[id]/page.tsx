@@ -9,6 +9,8 @@ import { parseFileId } from "../posts.utils";
 import { readAllPostsFiles } from "../posts.utils";
 import { mapFileToPosts } from "../posts.utils";
 import { Posts } from "../posts.types";
+import { cache } from 'react'
+
 
 export async function generateStaticParams() {
   const entries = await readAllPostsFiles() 
@@ -18,23 +20,26 @@ export async function generateStaticParams() {
   }))
 }
 
-// export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
-//   const { id } = await params
-//   const post = await getPostsById(id)
+export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
+  const { id } = await params
+  const post = await getPostsById(id)
 
-//   if (!post) return {}
+  if (!post) return {}
 
-//   return {
-//     title: post.title,
-//     description: post.description,
-//     openGraph: {
-//       title: post.title,
-//       description: post.description,
-//       type: 'article',
-//       publishedTime: post.date?.toISOString(),
-//     }
-//   }
-// }
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      publishedTime: post.date?.toISOString(),
+    }
+  }
+}
+
+
+export const getBlogPostById = cache(fetchPostById)
 
 export async function fetchPostById(id: string): Promise<Posts | undefined> {
   const allPostFiles = await readAllPostsFiles()
