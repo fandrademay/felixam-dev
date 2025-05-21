@@ -33,12 +33,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 }
 
-export async function fetchPostById(id: string): Promise<Posts | undefined> {
-  const allPostFiles = await readAllPostsFiles()
-  const postFile = allPostFiles.find(entry => parseFileId(entry) === id)
-  if (!postFile) return undefined
-  return mapFileToPosts(postFile)
-}
+// export async function fetchPostById(id: string): Promise<Posts | undefined> {
+//   const allPostFiles = await readAllPostsFiles()
+//   const postFile = allPostFiles.find(entry => parseFileId(entry) === id)
+//   if (!postFile) return undefined
+//   return mapFileToPosts(postFile)
+// }
 
 export default async function PostsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
