@@ -9,11 +9,12 @@ import { getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
 
 export async function generateStaticParams() {
   const entries = await readAllPostsFiles() 
- 
   return entries.map((entry) => ({
     id: parseFileId(entry),
   }))
 }
+
+export const dynamicParams = false
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
   const { id } = await params
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function PostsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const post = await getPostsById(id)
+  
 
   if (!post) return
 
