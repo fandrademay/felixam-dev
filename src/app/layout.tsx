@@ -27,6 +27,12 @@ export default function RootLayout(this: any, {
                           width={20} height={20} alt="Documents"/>
                   Documents
                 </Link>
+
+                <Link className={styles.minor} href="/posts" prefetch={true} replace={true}>
+                  <Image className={styles.white_inverting} src="/file.svg" 
+                          width={20} height={20} alt="Posts"/>
+                  Posts
+                </Link>
                 
                 <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
                       target="_blank" rel="noopener noreferrer">
