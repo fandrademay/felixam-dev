@@ -4,7 +4,10 @@ import '../../fonts.css';
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
-import { getPostsById, parseFileId, readAllPostsFiles, mapFileToPosts } from "../posts.utils";
+import { getPostsById } from "../posts.utils";
+import { parseFileId } from "../posts.utils";
+import { readAllPostsFiles } from "../posts.utils";
+import { mapFileToPosts } from "../posts.utils";
 import { Posts } from "../posts.types";
 
 export async function generateStaticParams() {
