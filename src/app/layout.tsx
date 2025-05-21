@@ -78,8 +78,13 @@ export default function RootLayout(this: any, {
 
         {children}
         
-        <footer>
-          This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
+        <footer className={styles.footer}>
+          <div className={styles.mytext}>
+            This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
+          </div>
+          <div className={styles.webring}>
+                <a href="https://aberwebr.ing/felixam/left"> &lt; </a> <a href="https://aberwebr.ing"> Aber Webring </a> <a href="https://aberwebr.ing/felixam/right"> &gt; </a>
+          </div>
         </footer>
       </body>
     </html>
