@@ -18,23 +18,23 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
-  const { id } = await params
-  const post = await getPostsById(id)
+// export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
+//   const { id } = await params
+//   const post = await getPostsById(id)
 
-  if (!post) return {}
+//   if (!post) return {}
 
-  return {
-    title: post.title,
-    description: post.description,
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      type: 'article',
-      publishedTime: post.date?.toISOString(),
-    }
-  }
-}
+//   return {
+//     title: post.title,
+//     description: post.description,
+//     openGraph: {
+//       title: post.title,
+//       description: post.description,
+//       type: 'article',
+//       publishedTime: post.date?.toISOString(),
+//     }
+//   }
+// }
 
 // export async function fetchPostById(id: string): Promise<Posts | undefined> {
 //   const allPostFiles = await readAllPostsFiles()
