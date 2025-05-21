@@ -4,12 +4,7 @@ import '../../fonts.css';
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
-import { getPostsById } from "../posts.utils";
-import { parseFileId } from "../posts.utils";
-import { readAllPostsFiles } from "../posts.utils";
-import { mapFileToPosts } from "../posts.utils";
-import { Posts } from "../posts.types";
-import { cache } from 'react'
+import { getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
 
 
 export async function generateStaticParams() {
@@ -36,16 +31,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       publishedTime: post.date?.toISOString(),
     }
   }
-}
-
-
-export const getBlogPostById = cache(fetchPostById)
-
-export async function fetchPostById(id: string): Promise<Posts | undefined> {
-  const allPostFiles = await readAllPostsFiles()
-  const postFile = allPostFiles.find(entry => parseFileId(entry) === id)
-  if (!postFile) return undefined
-  return mapFileToPosts(postFile)
 }
 
 export default async function PostsPage({ params }: { params: Promise<{ id: string }> }) {

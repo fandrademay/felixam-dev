@@ -3,6 +3,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from  'gray-matter'
 import { Posts } from './posts.types'
+import { cache } from 'react'
+
 
 
 export const postsFolder = path.join(process.cwd(), 'posts')
@@ -41,6 +43,15 @@ export async function mapFileToPosts(file: fs.Dirent): Promise<Posts> {
     content: matterData.content,
     description: matterData.data.description,
   }
+}
+
+export const getPostById = cache(fetchPostById)
+
+export async function fetchPostById(id: string): Promise<Posts | undefined> {
+  const allPostFiles = await readAllPostsFiles()
+  const postFile = allPostFiles.find(entry => parseFileId(entry) === id)
+  if (!postFile) return undefined
+  return mapFileToPosts(postFile)
 }
 
 function getFilePath(file: fs.Dirent): string {
