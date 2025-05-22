@@ -29,7 +29,7 @@ export default function RootLayout(this: any, {
                 </Link>
 
                 <Link className={styles.minor} href="/posts" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/file.svg" 
+                  <Image className={styles.white_inverting} src="/posts.svg" 
                           width={20} height={20} alt="Posts"/>
                   Posts
                 </Link>
@@ -57,6 +57,11 @@ export default function RootLayout(this: any, {
                 <Link className={styles.other} href="/documents" prefetch={true} replace={true}>
                   <Image className={styles.white_inverting} src="/file.svg" 
                           width={15} height={15} alt="Documents"/>
+                </Link>
+
+                <Link className={styles.other} href="/posts" prefetch={true} replace={true}>
+                  <Image className={styles.white_inverting} src="/posts.svg" 
+                          width={15} height={15} alt="Posts"/>
                 </Link>
                 
                 <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
