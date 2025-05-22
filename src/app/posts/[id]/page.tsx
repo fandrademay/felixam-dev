@@ -6,6 +6,16 @@ import remarkHtml from 'remark-html'
 
 import { getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
 
+import rehypeFormat from 'rehype-format'
+import rehypeRaw from 'rehype-raw'
+import rehypeStringify from 'rehype-stringify'
+import remarkDirective from 'remark-directive'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import {unified} from 'unified'
 
 export async function generateStaticParams() {
   const entries = await readAllPostsFiles() 
@@ -39,19 +49,35 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   const post = await getPostsById(id)
   
 
-  if (!post) return
+  if (!post) return {}
 
-  const htmlContent = (await remark().use(remarkHtml).process(post.content)).toString()
+  const processor = unified()
+  .use(remarkParse)
+  .use(remarkDirective)
+  .use(remarkFrontmatter)
+  .use(remarkGfm)
+  .use(remarkMath)
+  .use(remarkHtml)
+  .use(remarkRehype, {allowDangerousHtml: true})
+  .use(rehypeRaw)
+  .use(rehypeFormat)
+  .use(rehypeStringify)
+
+  // const htmlContent = (await remark().use(remarkHtml).process(post.content)).toString()
+
+  const htmlContent = await (await processor.process(post.content)).toString()
   
   return (
     <div className={styles.page}>
       <div className={styles.main}>
-        <div className={styles.postContent}>
+        <div className={styles.postHeader}>
           <h1>{post.title}</h1>
-          <h2>{post.description}</h2>
+          <hr></hr>
+          <h3>{post.description}</h3>
           <h3><i>Entered: &lt;{post.date?.toISOString().substring(0,10)}&gt;</i></h3>
-          <p dangerouslySetInnerHTML={{ __html: htmlContent }}/>
+          <hr></hr>
         </div>
+        <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: htmlContent }}/>
       </div>
     </div>
   );

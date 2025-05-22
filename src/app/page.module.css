@@ -49,6 +49,13 @@
   list-style-position: inside;
 }
 
+.postHeader {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .postContent {
   width: 55%;
   display: flex;
