@@ -1,7 +1,6 @@
 import styles from "../../page.module.css";
 import '../../fonts.css';
 
-import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
 import { getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
@@ -48,8 +47,7 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   const { id } = await params;
   const post = await getPostsById(id)
   
-
-  if (!post) return {}
+  if (!post) return
 
   const processor = unified()
   .use(remarkParse)
@@ -71,13 +69,16 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
     <div className={styles.page}>
       <div className={styles.main}>
         <div className={styles.postHeader}>
-          <h1>{post.title}</h1>
+          <div className={styles.postTitle}>
+            <a className={styles.postsBackButton} href="/posts"> <h1>&lt;</h1> </a>&emsp;&emsp;&emsp;<h1 className={styles.title}>{post.title}</h1>
+          </div>
           <hr></hr>
           <h3>{post.description}</h3>
-          <h3><i>Entered: &lt;{post.date?.toISOString().substring(0,10)}&gt;</i></h3>
+          <h3><i>Entered: {post.date?.toISOString().substring(0,10)}</i></h3>
           <hr></hr>
         </div>
-        <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: htmlContent }}/>
+
+          <div dangerouslySetInnerHTML={{ __html: htmlContent }} className={styles.postContent}/>
       </div>
     </div>
   );
