@@ -49,6 +49,13 @@
   list-style-position: inside;
 }
 
+.postContent {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .main h1 {
   font-family: spaceGrotesk;
   font-size:66px;

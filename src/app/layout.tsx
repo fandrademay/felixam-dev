@@ -11,7 +11,8 @@ export default function RootLayout(this: any, {
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+
+    <html lang="en" suppressHydrationWarning>
       <body>
           <main className={styles.main}>
             <div className={styles.header}>

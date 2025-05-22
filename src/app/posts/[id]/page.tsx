@@ -46,9 +46,12 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   return (
     <div className={styles.page}>
       <div className={styles.main}>
-        <h3>{post.title}</h3>
-        <p>&lt;{post.date?.toISOString().substring(0,10)}&gt;</p>
-        <p dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        <div className={styles.postContent}>
+          <h1>{post.title}</h1>
+          <h2>{post.description}</h2>
+          <h3><i>Entered: &lt;{post.date?.toISOString().substring(0,10)}&gt;</i></h3>
+          <p dangerouslySetInnerHTML={{ __html: htmlContent }}/>
+        </div>
       </div>
     </div>
   );
