@@ -5,6 +5,7 @@ import { getAllPosts, sortPosts } from './posts.utils'
 
 export default async function PostsHomePage() {
   const posts = await getAllPosts()
+  console.log(posts)
   posts.sort(sortPosts).reverse()
 
   return (

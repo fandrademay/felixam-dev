@@ -45,7 +45,7 @@ export default function RootLayout(this: any, {
                   <Image src="/github-mark-white.svg" width={20} height={20} alt="GitHub"/>
                 </Link>
 
-                <Link className={styles.other} href="https://felixam.dev">
+                <Link className={styles.other} href="/">
                   <Image src="/home.svg" width={20} height={20} alt="Home"/>
                 </Link>
               </div>
@@ -75,7 +75,7 @@ export default function RootLayout(this: any, {
                   <Image src="/github-mark-white.svg" width={15} height={15} alt="GitHub"/>
                 </Link>
 
-                <Link className={styles.other} href="https://felixam.dev">
+                <Link className={styles.other} href="/">
                   <Image src="/home.svg" width={15} height={15} alt="Home"/>
                 </Link>
               </div>
