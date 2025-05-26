@@ -59,13 +59,5 @@ function getFilePath(file: fs.Dirent): string {
 }
 
 export function parseFileId(file: fs.Dirent): string {
-  return file.name.replace(/\.md$/, '') // remove the '.md' file extension
-}
-
-export async function getNextPost(id: string): Promise<void> {
-  const allPosts = await getAllPosts()
-  // const nextPostFile = 
-  console.log(allPosts)
-  // if (!nextPostFile) return undefined
-  // return mapFileToPosts(nextPostFile)
+  return file.name.replace(/\.md$/, '')
 }

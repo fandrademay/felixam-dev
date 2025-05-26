@@ -57,8 +57,6 @@ export async function backButton(id: string): Promise<string>{
   for (let i = 0; i < allPosts.length; i++) {
     if (allPosts[i].id === post.id) {
       postIndex = allPosts.indexOf(allPosts[i])
-      console.log("Post Index:", postIndex, "\n Num Posts:", allPosts.length)
-      // return postIndex
     }
   }
 
@@ -86,11 +84,11 @@ export async function forwardButton(id: string): Promise<string>{
     }
   }
 
-  if (postIndex === allPosts.length) {
+  if (postIndex === (allPosts.length)-1) {
     let href_link = `/posts/${allPosts[0].id}`
-    return href_link
+    return encodeURI(href_link)
   } else {
-    let href_link = `/posts/${allPosts[postIndex+1].id}`
+    let href_link = `/posts/${allPosts[++postIndex]?.id}`
     return encodeURI(href_link)
   }
 
@@ -113,8 +111,6 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   .use(rehypeRaw)
   .use(rehypeFormat)
   .use(rehypeStringify)
-
-  // const htmlContent = (await remark().use(remarkHtml).process(post.content)).toString()
 
   const htmlContent = await (await processor.process(post.content)).toString()
 
