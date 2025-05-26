@@ -9,7 +9,12 @@
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
   --button-primary-hover: #ccc;
-  --button-secondary-hover: #f0b165;
+  --button-secondary-hover: #d4472d;
+  --background-colour: #accab2;
+  --secondary-colour: #d4472d;
+  --tertiary-colour: #e9a752;
+  --quaternary-colour: #78614d;
+
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -92,6 +97,10 @@
   text-align: justify;
 }
 
+.postContent a {
+  color: var(--quaternary-colour);
+}
+
 .main h1 {
   font-family: spaceGrotesk;
   font-size:66px;
@@ -112,7 +121,7 @@
 
 .main code {
   font-family: inherit;
-  background: var(--gray-alpha-100);
+  background: var(--quaternary-colour);
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -144,8 +153,8 @@
 }
 
 a.major {
-  border-color: #f0b165;
-  background: #f0b165;
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
   color: #000;
   gap: 8px;
 }
@@ -157,14 +166,14 @@ a.major:hover {
 }
 
 a.minor{
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   min-width: 125px;
 }
 
 a.minor:hover {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   color: #000;
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
 a.minor .white_inverting{
@@ -198,17 +207,17 @@ a.minor:hover .white_inverting {
 }
 
 a.other {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   float: right;
 }
 
 a.other:hover {
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #1E6496;
+  border-color:var(--secondary-colour);
+  background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -221,8 +230,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
   color: #ffffff;
   gap: 16px;
   transition:
@@ -434,8 +443,8 @@ a.pdf_button:hover {
 }
 
 a.major {
-  border-color: #f0b165;
-  background: #f0b165;
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
   color: #000;
   gap: 8px;
 }
@@ -447,14 +456,14 @@ a.major:hover {
 }
 
 a.minor {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   min-width: 125px;
 }
 
 a.minor:hover {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   color: #000;
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
 a.minor .white_inverting{
@@ -488,17 +497,17 @@ a.minor:hover .white_inverting {
 }
 
 a.other {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   float: right;
 }
 
 a.other:hover {
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #1E6496;
+  border-color: var(--secondary-colour);
+  background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -511,8 +520,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
   color: #ffffff;
   gap: 16px;
   transition:

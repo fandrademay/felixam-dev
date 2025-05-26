@@ -1,12 +1,22 @@
 :root {
-  --background: #060f37;
-  --foreground: #f0b165;
+  --background-colour: #accab2;
+  --secondary-colour: #d4472d;
+  --tertiary-colour: #e9a752;
+  --quaternary-colour: #78614d;
+
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #060f37;
-    --foreground: #f0b165;
+    --background-colour: #accab2;
+    --secondary-colour: #d4472d;
+    --tertiary-colour: #e9a752;
+    --quaternary-colour: #78614d;
+
+    --background: var(--background-colour);
+    --foreground: var(--secondary-colour);
   }
 }
 

@@ -52,7 +52,8 @@ export default function RootLayout(this: any, {
 
               <div className={styles.ctas_mobile}>
                 <Link className={styles.other} href="/contact" prefetch={true} replace={true}>
-                  <Image src="/contact_mobile.svg" width={15} height={15} alt="Contact"/>
+                  <Image className={styles.white_inverting} src="/contact.svg" 
+                          width={15} height={15} alt="Contact"/>
                 </Link>
                 
                 <Link className={styles.other} href="/documents" prefetch={true} replace={true}>
