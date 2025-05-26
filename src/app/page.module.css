@@ -139,6 +139,17 @@
   display: flex;
 }
 
+.ctas div.otherButtons a.other {
+  border-color: var(--secondary-colour);
+  color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
+}
+
+.ctas div.otherButtons a.other:hover {
+  background-color: var(--tertiary-colour);
+  border-color: var(--tertiary-colour);
+}
+
 .ctas a {
   appearance: none;
   border-radius: 64px;
@@ -159,17 +170,17 @@
   font-weight: 500;
 }
 
-a.major {
+.ctas a.major {
   border-color: var(--secondary-colour);
   background: var(--secondary-colour);
-  color: #000;
+  color: var(--tertiary-colour);
   gap: 8px;
 }
 
-a.major:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #000;
+.ctas a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--secondary-colour);
 }
 
 a.minor{
@@ -211,14 +222,6 @@ a.minor:hover .white_inverting {
     hue-rotate(326deg) 
     brightness(111%) 
     contrast(111%);
-}
-
-a.other {
-  border-color: var(--secondary-colour);
-}
-
-a.other:hover {
-  background-color: var(--secondary-colour);
 }
 
 a.pdf_button {
