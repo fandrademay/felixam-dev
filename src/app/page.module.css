@@ -177,51 +177,59 @@
   gap: 8px;
 }
 
+.ctas a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+    filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+.ctas a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  color: var(--secondary-colour);
+}
+
 .ctas a.major:hover {
   border-color: var(--tertiary-colour);
   background: var(--tertiary-colour);
   color: var(--secondary-colour);
 }
 
-a.minor{
+.ctas a.minor{
   border-color: var(--secondary-colour);
   min-width: 125px;
 }
 
-a.minor:hover {
+.ctas a.minor:hover {
   border-color: var(--secondary-colour);
-  color: #000;
+  color: var(--tertiary-colour);
   background-color: var(--secondary-colour);
 }
 
-a.minor .white_inverting{
+.ctas a.minor .inverting{
   transition:
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: 
-    brightness(0) 
-    saturate(100%) 
-    invert(77%) 
-    sepia(42%) 
-    saturate(657%) 
-    hue-rotate(332deg) 
-    brightness(97%) 
-    contrast(94%);
+  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  color: var(--secondary-colour);
 }
+
 /* for the SVG */
-a.minor:hover .white_inverting {
+.ctas a.minor:hover .inverting {
   transition:
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter:
-    invert(89%) 
-    sepia(100%) 
-    saturate(46%) 
-    hue-rotate(326deg) 
-    brightness(111%) 
-    contrast(111%);
+  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  color: var(--tertiary-colour);
 }
 
 a.pdf_button {
@@ -475,7 +483,7 @@ a.minor:hover {
   background-color: var(--secondary-colour);
 }
 
-a.minor .white_inverting{
+a.minor .inverting{
   transition:
     background 0.1s,
     color 0.1s,
@@ -491,7 +499,7 @@ a.minor .white_inverting{
     contrast(94%);
 }
 /* for the SVG */
-a.minor:hover .white_inverting {
+a.minor:hover .inverting {
   transition:
     background 0.1s,
     color 0.1s,

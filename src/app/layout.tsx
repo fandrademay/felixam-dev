@@ -18,19 +18,19 @@ export default function RootLayout(this: any, {
             <div className={styles.header}>
               <div className={styles.ctas}>
                 <Link className={styles.major} href="/contact" prefetch={true} replace={true}>
-                  <Image src="/contact.svg" 
+                  <Image className={styles.inverting} src="/contact.svg" 
                           width={20} height={20} alt="Contact"/>
                   Contact
                 </Link>
                 
                 <Link className={styles.minor} href="/documents" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/file.svg" 
+                  <Image className={styles.inverting} src="/file.svg" 
                           width={20} height={20} alt="Documents"/>
                   Documents
                 </Link>
 
                 <Link className={styles.minor} href="/posts" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/posts.svg" 
+                  <Image className={styles.inverting} src="/posts.svg" 
                           width={20} height={20} alt="Posts"/>
                   Posts
                 </Link>
@@ -55,17 +55,17 @@ export default function RootLayout(this: any, {
 
               <div className={styles.ctas_mobile}>
                 <Link className={styles.other} href="/contact" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/contact.svg" 
+                  <Image className={styles.inverting} src="/contact.svg" 
                           width={15} height={15} alt="Contact"/>
                 </Link>
                 
                 <Link className={styles.other} href="/documents" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/file.svg" 
+                  <Image className={styles.inverting} src="/file.svg" 
                           width={15} height={15} alt="Documents"/>
                 </Link>
 
                 <Link className={styles.other} href="/posts" prefetch={true} replace={true}>
-                  <Image className={styles.white_inverting} src="/posts.svg" 
+                  <Image className={styles.inverting} src="/posts.svg" 
                           width={15} height={15} alt="Posts"/>
                 </Link>
                 
