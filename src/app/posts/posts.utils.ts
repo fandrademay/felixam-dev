@@ -59,5 +59,53 @@ function getFilePath(file: fs.Dirent): string {
 }
 
 export function parseFileId(file: fs.Dirent): string {
-  return file.name.replace(/\.md$/, '') // remove the '.md' file extension
+  return file.name.replace(/\.md$/, '')
+}
+
+export async function backButton(id: string): Promise<string>{
+  const post = await getPostsById(id)
+  const allPosts = await getAllPosts()
+
+  if (!post) return ('')
+
+  let postIndex = 0
+
+  for (let i = 0; i < allPosts.length; i++) {
+    if (allPosts[i].id === post.id) {
+      postIndex = allPosts.indexOf(allPosts[i])
+    }
+  }
+
+  if (postIndex === 0) {
+    let href_link = `/posts`
+    return href_link
+  } else {
+    let href_link = `/posts/${allPosts[postIndex-1].id}`
+    return encodeURI(href_link)
+  }
+
+}
+
+export async function forwardButton(id: string): Promise<string>{
+  const post = await getPostsById(id)
+  const allPosts = await getAllPosts()
+
+  if (!post) return ('')
+
+  let postIndex = 0
+
+  for (let i = 0; i < allPosts.length; i++) {
+    if (allPosts[i].id === post.id) {
+      postIndex = allPosts.indexOf(allPosts[i])
+    }
+  }
+
+  if (postIndex === (allPosts.length)-1) {
+    let href_link = `/posts/${allPosts[0].id}`
+    return encodeURI(href_link)
+  } else {
+    let href_link = `/posts/${allPosts[++postIndex]?.id}`
+    return encodeURI(href_link)
+  }
+
 }

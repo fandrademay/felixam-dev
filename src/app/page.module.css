@@ -9,7 +9,12 @@
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
   --button-primary-hover: #ccc;
-  --button-secondary-hover: #f0b165;
+  --button-secondary-hover: #d4472d;
+  --background-colour: #accab2;
+  --secondary-colour: #d4472d;
+  --tertiary-colour: #e9a752;
+  --quaternary-colour: #78614d;
+
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -49,6 +54,53 @@
   list-style-position: inside;
 }
 
+.postHeader {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+}
+
+.postTitle {
+  display: table;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.postTitle h1.title {
+  display: table-cell;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 20px; */
+}
+
+.postTitle Link.postsSeekingButton {
+  display: table-cell;
+  align-items: flex-start;
+  justify-content: left;
+  vertical-align: middle;
+}
+
+.postContent {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.postContent h1 {
+  font-family: spaceGrotesk;
+  font-size:44px;
+  line-height: 54px;
+  letter-spacing: -0.01em;
+  text-align: justify;
+}
+
+.postContent a {
+  color: var(--quaternary-colour);
+}
+
 .main h1 {
   font-family: spaceGrotesk;
   font-size:66px;
@@ -56,13 +108,20 @@
   letter-spacing: -0.01em;
 }
 
-.main li:not(:last-of-type) {
+.main li {
   margin-bottom: 8px;
+  list-style-position: inside;
+}
+
+.main ul {
+  font-family: spaceGrotesk;
+  padding-inline-start: 16px;
+  list-style-position: inside;
 }
 
 .main code {
   font-family: inherit;
-  background: var(--gray-alpha-100);
+  background: var(--quaternary-colour);
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -71,6 +130,24 @@
 .ctas {
   display: flex;
   gap: 16px;
+}
+
+.ctas div.otherButtons {
+  margin-right: 16px;
+  margin-left: auto;
+  gap: 16px;
+  display: flex;
+}
+
+.ctas div.otherButtons a.other {
+  border-color: var(--secondary-colour);
+  color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
+}
+
+.ctas div.otherButtons a.other:hover {
+  background-color: var(--tertiary-colour);
+  border-color: var(--tertiary-colour);
 }
 
 .ctas a {
@@ -93,72 +170,71 @@
   font-weight: 500;
 }
 
-a.major {
-  border-color: #f0b165;
-  background: #f0b165;
-  color: #000;
+.ctas a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--tertiary-colour);
   gap: 8px;
 }
 
-a.major:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #000;
+.ctas a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+    filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  color: var(--tertiary-colour);
 }
 
-a.minor{
-  border-color: #f0b165;
+/* for the SVG */
+.ctas a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  color: var(--secondary-colour);
+}
+
+.ctas a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--secondary-colour);
+}
+
+.ctas a.minor{
+  border-color: var(--secondary-colour);
   min-width: 125px;
 }
 
-a.minor:hover {
-  border-color: #f0b165;
-  color: #000;
-  background-color: #f0b165;
+.ctas a.minor:hover {
+  border-color: var(--secondary-colour);
+  color: var(--tertiary-colour);
+  background-color: var(--secondary-colour);
 }
 
-a.minor .white_inverting{
+.ctas a.minor .inverting{
   transition:
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: 
-    brightness(0) 
-    saturate(100%) 
-    invert(77%) 
-    sepia(42%) 
-    saturate(657%) 
-    hue-rotate(332deg) 
-    brightness(97%) 
-    contrast(94%);
+  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  color: var(--secondary-colour);
 }
+
 /* for the SVG */
-a.minor:hover .white_inverting {
+.ctas a.minor:hover .inverting {
   transition:
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter:
-    invert(89%) 
-    sepia(100%) 
-    saturate(46%) 
-    hue-rotate(326deg) 
-    brightness(111%) 
-    contrast(111%);
-}
-
-a.other {
-  border-color: #f0b165;
-  float: right;
-}
-
-a.other:hover {
-  background-color: #f0b165;
+  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  color: var(--tertiary-colour);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #1E6496;
+  border-color:var(--secondary-colour);
+  background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -171,8 +247,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
   color: #ffffff;
   gap: 16px;
   transition:
@@ -384,8 +460,8 @@ a.pdf_button:hover {
 }
 
 a.major {
-  border-color: #f0b165;
-  background: #f0b165;
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
   color: #000;
   gap: 8px;
 }
@@ -397,17 +473,17 @@ a.major:hover {
 }
 
 a.minor {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   min-width: 125px;
 }
 
 a.minor:hover {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   color: #000;
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
-a.minor .white_inverting{
+a.minor .inverting{
   transition:
     background 0.1s,
     color 0.1s,
@@ -423,7 +499,7 @@ a.minor .white_inverting{
     contrast(94%);
 }
 /* for the SVG */
-a.minor:hover .white_inverting {
+a.minor:hover .inverting {
   transition:
     background 0.1s,
     color 0.1s,
@@ -438,17 +514,17 @@ a.minor:hover .white_inverting {
 }
 
 a.other {
-  border-color: #f0b165;
+  border-color: var(--secondary-colour);
   float: right;
 }
 
 a.other:hover {
-  background-color: #f0b165;
+  background-color: var(--secondary-colour);
 }
 
 a.pdf_button {
-  border-color:#f0b165;
-  background-color: #1E6496;
+  border-color: var(--secondary-colour);
+  background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
   width: 250px;
@@ -461,8 +537,8 @@ a.pdf_button {
 }
 
 a.pdf_button:hover {
-  border-color: #f0b165;
-  background-color: #f0b165;
+  border-color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
   color: #ffffff;
   gap: 16px;
   transition:
