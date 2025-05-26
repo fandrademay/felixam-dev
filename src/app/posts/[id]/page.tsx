@@ -4,7 +4,7 @@ import '../../fonts.css';
 import Link from "next/link";
 
 import { Posts } from "../posts.types";
-import { getAllPosts, getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
+import { backButton, forwardButton, getAllPosts, getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
 
 import remarkHtml from 'remark-html'
 import rehypeFormat from 'rehype-format'
@@ -44,54 +44,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       publishedTime: post.date?.toISOString(),
     }
   }
-}
-
-export async function backButton(id: string): Promise<string>{
-  const post = await getPostsById(id)
-  const allPosts = await getAllPosts()
-
-  if (!post) return ('')
-
-  let postIndex = 0
-
-  for (let i = 0; i < allPosts.length; i++) {
-    if (allPosts[i].id === post.id) {
-      postIndex = allPosts.indexOf(allPosts[i])
-    }
-  }
-
-  if (postIndex === 0) {
-    let href_link = `/posts`
-    return href_link
-  } else {
-    let href_link = `/posts/${allPosts[postIndex-1].id}`
-    return encodeURI(href_link)
-  }
-
-}
-
-export async function forwardButton(id: string): Promise<string>{
-  const post = await getPostsById(id)
-  const allPosts = await getAllPosts()
-
-  if (!post) return ('')
-
-  let postIndex = 0
-
-  for (let i = 0; i < allPosts.length; i++) {
-    if (allPosts[i].id === post.id) {
-      postIndex = allPosts.indexOf(allPosts[i])
-    }
-  }
-
-  if (postIndex === (allPosts.length)-1) {
-    let href_link = `/posts/${allPosts[0].id}`
-    return encodeURI(href_link)
-  } else {
-    let href_link = `/posts/${allPosts[++postIndex]?.id}`
-    return encodeURI(href_link)
-  }
-
 }
 
 export default async function PostsPage({ params }: { params: Promise<{ id: string }> }) {
