@@ -17,7 +17,6 @@
     "n": "^10.1.0",
     "next": "^15.3.2",
     "next-burger-menu": "^1.1.0",
-    "pdfjs": "^2.5.3",
     "pnpm": "^10.11.0",
     "process": "^0.11.10",
     "react": "^19.0.0",
@@ -38,8 +37,8 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@nextui-org/react": "^2.6.11",
     "@types/node": "^20",
-    "@types/pdfjs-dist": "^2.10.377",
     "@types/react": "^19",
     "@types/react-burger-menu": "^2.8.7",
     "@types/react-dom": "^19",
