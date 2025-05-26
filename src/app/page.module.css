@@ -132,6 +132,13 @@
   gap: 16px;
 }
 
+.ctas div.otherButtons {
+  margin-right: 16px;
+  margin-left: auto;
+  gap: 16px;
+  display: flex;
+}
+
 .ctas a {
   appearance: none;
   border-radius: 64px;
@@ -208,7 +215,6 @@ a.minor:hover .white_inverting {
 
 a.other {
   border-color: var(--secondary-colour);
-  float: right;
 }
 
 a.other:hover {

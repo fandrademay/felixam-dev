@@ -34,20 +34,23 @@ export default function RootLayout(this: any, {
                           width={20} height={20} alt="Posts"/>
                   Posts
                 </Link>
+
+                <div className={styles.otherButtons}>
                 
-                <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
-                      target="_blank" rel="noopener noreferrer">
-                  <Image src="/linkedin-White-34.png" width={20} height={20} alt="LinkedIn"/>
-                </Link>
+                  <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
+                        target="_blank" rel="noopener noreferrer">
+                    <Image src="/linkedin-White-34.png" width={20} height={20} alt="LinkedIn"/>
+                  </Link>
 
-                <Link className={styles.other} href="https://github.com/fandrademay" 
-                      target="_blank" rel="noopener noreferrer">
-                  <Image src="/github-mark-white.svg" width={20} height={20} alt="GitHub"/>
-                </Link>
+                  <Link className={styles.other} href="https://github.com/fandrademay" 
+                        target="_blank" rel="noopener noreferrer">
+                    <Image src="/github-mark-white.svg" width={20} height={20} alt="GitHub"/>
+                  </Link>
 
-                <Link className={styles.other} href="/">
-                  <Image src="/home.svg" width={20} height={20} alt="Home"/>
-                </Link>
+                  <Link className={styles.other} href="/">
+                    <Image src="/home.svg" width={20} height={20} alt="Home"/>
+                  </Link>
+                </div>
               </div>
 
               <div className={styles.ctas_mobile}>
