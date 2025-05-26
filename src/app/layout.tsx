@@ -89,11 +89,13 @@ export default function RootLayout(this: any, {
         {children}
         
         <footer className={styles.footer}>
-          <div className={styles.mytext}>
-            This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.
+          <div className={styles.settings_access}>
+            <Link href="/settings" prefetch={true} replace={true}>
+              <Image className={styles.settings_icon} src="/settings.svg" width={30} height={30} alt="Settings"/>
+            </Link>
           </div>
           <div className={styles.webring}>
-                <a href="https://aberwebr.ing/felixam/left"> &lt; </a> <a href="https://aberwebr.ing"> Aber Webring </a> <a href="https://aberwebr.ing/felixam/right"> &gt; </a>
+            <a href="https://aberwebr.ing/felixam/left"> &lt; </a> <a href="https://aberwebr.ing"> Aber Webring </a> <a href="https://aberwebr.ing/felixam/right"> &gt; </a>
           </div>
         </footer>
       </body>

@@ -336,10 +336,29 @@ a.pdf_button:hover {
   margin-right: 16px;
 }
 
-.footer div.mytext {
+.footer div.settings_access {
   margin-right: auto;
   margin-left: 16px;
 }
+
+.footer div.settings_access img.settings_icon {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  color: var(--secondary-colour);
+}
+
+.footer div.settings_access img.settings_icon:hover {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  color: var(--tertiary-colour);
+}
+
 
 .footer img {
   flex-shrink: 0;
