@@ -1,4 +1,4 @@
-:root {
+:root body {
   --background-colour: #accab2;
   --secondary-colour: #d4472d;
   --tertiary-colour: #e9a752;
@@ -6,18 +6,20 @@
 
   --background: var(--background-colour);
   --foreground: var(--secondary-colour);
+
+  background: var(--background-colour)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-colour: #accab2;
-    --secondary-colour: #d4472d;
-    --tertiary-colour: #e9a752;
-    --quaternary-colour: #78614d;
+:root.dark body {
+  --background-colour: #060f37;
+  --secondary-colour: #e9a752;
+  --tertiary-colour: #1E6496;
+  --quaternary-colour: #d4472d;
 
-    --background: var(--background-colour);
-    --foreground: var(--secondary-colour);
-  }
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
+
+  background: var(--background-colour)
 }
 
 html,

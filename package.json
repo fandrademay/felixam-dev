@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@designcise/next-theme-toggle": "^4.0.0",
     "@netlify/plugin-nextjs": "^5.11.2",
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@wojtekmaj/react-hooks": "^1.21.0",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^0.511.0",
     "n": "^10.1.0",
     "next": "^15.3.2",
     "next-burger-menu": "^1.1.0",

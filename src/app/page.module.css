@@ -4,17 +4,12 @@
 }
 
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
   --button-primary-hover: #ccc;
   --button-secondary-hover: #d4472d;
   --background-colour: #accab2;
   --secondary-colour: #d4472d;
   --tertiary-colour: #e9a752;
   --quaternary-colour: #78614d;
-
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -26,16 +21,24 @@
   font-family: spaceGrotesk;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+.page.dark {
+  --background-colour: #060f37;
+  --secondary-colour: #e9a752;
+  --tertiary-colour: #1E6496;
+  --quaternary-colour: #d4472d;
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #f0b165;
-  }
-} */
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: 80px;
+  gap: 64px;
+  font-family: spaceGrotesk;
+}
 
 .main {
   display: flex;
@@ -578,4 +581,98 @@ a.pdf_button:hover {
   padding: 16px;
   gap: 16px;
   justify-content: space-between;
+}
+
+
+/* From Uiverse.io by Voxybuns */ 
+/* The switch - the box around the slider */
+
+.div.toggle_switch {
+  display: table;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.div.toggle_switch h3 {
+  display: table-cell;
+  align-items: center;
+  justify-content: center;
+  font-size: 30000px;
+}
+
+.switch {
+  /* Variables */
+ --switch_width: 2em;
+ --switch_height: 1em;
+ --thumb_color: #e8e8e8;
+ --track_color: #e8e8e8;
+ --track_active_color: #888;
+ --outline_color: #000;
+ font-size: 17px;
+ position: relative;
+ display: inline-block;
+ width: var(--switch_width);
+ height: var(--switch_height);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ box-sizing: border-box;
+ border: 2px solid var(--outline_color);
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: var(--track_color);
+ transition: .15s;
+ border-radius: var(--switch_height);
+}
+
+.slider:before {
+ box-sizing: border-box;
+ position: absolute;
+ content: "";
+ height: var(--switch_height);
+ width: var(--switch_height);
+ border: 2px solid var(--outline_color);
+ border-radius: 100%;
+ left: -2px;
+ bottom: -2px;
+ background-color: var(--thumb_color);
+ transform: translateY(-0.2em);
+ box-shadow: 0 0.2em 0 var(--outline_color);
+ transition: .15s;
+}
+
+input:checked + .slider {
+ background-color: var(--track_active_color);
+}
+
+input:focus-visible + .slider {
+ box-shadow: 0 0 0 2px var(--track_active_color);
+}
+
+/* Raise thumb when hovered */
+input:hover + .slider:before {
+ transform: translateY(-0.3em);
+ box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+input:checked + .slider:before {
+ transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+}
+
+/* Raise thumb when hovered & checked */
+input:hover:checked + .slider:before {
+ transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+ box-shadow: 0 0.3em 0 var(--outline_color);
 }

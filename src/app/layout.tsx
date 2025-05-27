@@ -2,6 +2,9 @@ import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { ThemeProvider } from '@designcise/next-theme-toggle';
+import { themes } from '@designcise/next-theme-toggle/server';
+
 
 // import { slide as Menu } from "next-burger-menu"
 
@@ -14,6 +17,7 @@ export default function RootLayout(this: any, {
 
     <html lang="en" suppressHydrationWarning>
       <body>
+        <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
           <main className={styles.main}>
             <div className={styles.header}>
               <div className={styles.ctas}>
@@ -86,18 +90,19 @@ export default function RootLayout(this: any, {
             </div>
           </main>
 
-        {children}
-        
-        <footer className={styles.footer}>
-          <div className={styles.settings_access}>
-            <Link href="/settings" prefetch={true} replace={true}>
-              <Image className={styles.settings_icon} src="/settings.svg" width={30} height={30} alt="Settings"/>
-            </Link>
-          </div>
-          <div className={styles.webring}>
-            <a href="https://aberwebr.ing/felixam/left"> &lt; </a> <a href="https://aberwebr.ing"> Aber Webring </a> <a href="https://aberwebr.ing/felixam/right"> &gt; </a>
-          </div>
-        </footer>
+          {children}
+          
+          <footer className={styles.footer}>
+            <div className={styles.settings_access}>
+              <Link href="/settings" prefetch={true} replace={true}>
+                <Image className={styles.settings_icon} src="/settings.svg" width={30} height={30} alt="Settings"/>
+              </Link>
+            </div>
+            <div className={styles.webring}>
+              <a href="https://aberwebr.ing/felixam/left"> &lt; </a> <a href="https://aberwebr.ing"> Aber Webring </a> <a href="https://aberwebr.ing/felixam/right"> &gt; </a>
+            </div>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
