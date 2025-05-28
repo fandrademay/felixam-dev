@@ -13,7 +13,8 @@ export default function Home({ Component, pageProps }: AppProps) {
     <div className={styles.page}>
       <div className={styles.main}>
         <h1>Settings</h1>
-          <ToggleThemeButton/> Toggle Theme
+          <ToggleThemeButton/>
+          {/* <ToggleLanguageButton/> */}
         <p>This website was built with <a href="https://nextjs.org/">Next.js</a> in <a href="https://www.typescriptlang.org/">TypeScript</a>.</p>
       </div>
     </div>

@@ -9,10 +9,10 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Documents</h1>
           <div className={styles.ctas}>
-            <Link href={'fea6_ProjectReport_2024.pdf'} className={styles.pdf_button} 
+            <Link href={'pdfs/fea6_ProjectReport_2024.pdf'} className={styles.pdf_button} 
                   target="_blank" rel="noopener noreferrer" download>
               <div className={styles.container}>
-                <Image src="/fea6-ProjectReport-2024-cover.png" 
+                <Image src="/images/pdf_covers/fea6-ProjectReport-2024-cover.png" 
                         width={164.35} height={230.25} alt="fea6_ProjectReport_2024_cover.png"/>
               </div>
               <div className={styles.container}>
@@ -21,10 +21,10 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href={'FelixAM_cv.pdf'} className={styles.pdf_button} 
+            <Link href={'pdfs/FelixAM_cv.pdf'} className={styles.pdf_button} 
                   target="_blank" rel="noopener noreferrer" download>
               <div className={styles.container}>
-                <Image src="/FelixAM-cv-cover.png" width={164.35} height={230.25} alt="FelixAM-cv-cover.png"/>
+                <Image src="/images/pdf_covers/FelixAM-cv-cover.png" width={164.35} height={230.25} alt="FelixAM-cv-cover.png"/>
               </div>
               <div className={styles.container}>
                 {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
@@ -32,10 +32,10 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href={'cbi-report.pdf'} className={styles.pdf_button}
+            <Link href={'pdfs/cbi-report.pdf'} className={styles.pdf_button}
                   target="_blank" rel="noopener noreferrer" download>
               <div className={styles.container}>
-                <Image src="/cbi-report-cover.png" width={164.35} height={230.25} alt="cbi-report-cover.png"/>
+                <Image src="/images/pdf_covers/cbi-report-cover.png" width={164.35} height={230.25} alt="cbi-report-cover.png"/>
               </div>
               <div className={styles.container}>
                 {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
@@ -47,10 +47,10 @@ export default function Home() {
 
           <div className={styles.ctas_mobile}>
             <div className={styles.vertical_pdfs}>
-              <Link href={'fea6_ProjectReport_2024.pdf'} className={styles.pdf_button} 
+              <Link href={'pdfs/fea6_ProjectReport_2024.pdf'} className={styles.pdf_button} 
                     target="_blank" rel="noopener noreferrer" download>
                 <div className={styles.container}>
-                  <Image src="/fea6-ProjectReport-2024-cover.png" 
+                  <Image src="/images/pdf_covers/fea6-ProjectReport-2024-cover.png" 
                           width={219} height={307} alt="fea6_ProjectReport_2024_cover.png"/>
                 </div>
                 <div className={styles.container}>
@@ -59,10 +59,10 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href={'FelixAM_cv.pdf'} className={styles.pdf_button} 
+              <Link href={'pdfs/FelixAM_cv.pdf'} className={styles.pdf_button} 
                     target="_blank" rel="noopener noreferrer" download>
                 <div className={styles.container}>
-                  <Image src="/FelixAM-cv-cover.png" width={219} height={307} alt="FelixAM-cv-cover.png"/>
+                  <Image src="/images/pdf_covers/FelixAM-cv-cover.png" width={219} height={307} alt="FelixAM-cv-cover.png"/>
                 </div>
                 <div className={styles.container}>
                   {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
@@ -70,10 +70,10 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href={'cbi-report.pdf'} className={styles.pdf_button}
+              <Link href={'pdfs/cbi-report.pdf'} className={styles.pdf_button}
                   target="_blank" rel="noopener noreferrer" download>
                 <div className={styles.container}>
-                  <Image src="/cbi-report-cover.png" width={219} height={307} alt="cbi-report-cover.png"/>
+                  <Image src="/images/pdf_covers/cbi-report-cover.png" width={219} height={307} alt="cbi-report-cover.png"/>
                 </div>
                 <div className={styles.container}>
                   {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
