@@ -32,17 +32,3 @@ export default function ToggleLocaleButton() {
     </div>
   );
 }
-
-
-// export default function LocaleSwitcher() {
-
-//   return (
-//     <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-//       {routing.locales.map((cur) => (
-//         <option key={cur} value={cur}>
-//           {t('locale', {locale: cur})}
-//         </option>
-//       ))}
-//     </LocaleSwitcherSelect>
-//   );
-// }

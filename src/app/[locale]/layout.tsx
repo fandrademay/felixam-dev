@@ -3,12 +3,14 @@ import styles from "./page.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
+
 import { ThemeProvider } from '@designcise/next-theme-toggle';
 import { themes } from '@designcise/next-theme-toggle/server';
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
-import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 
 export default async function LocaleLayout({children, params}: {
@@ -20,6 +22,7 @@ export default async function LocaleLayout({children, params}: {
     notFound();
   }
   setRequestLocale(locale);
+  const currentLocale = await getLocale();
   const t = await getTranslations('Layout');
 
   return (
@@ -92,7 +95,7 @@ export default async function LocaleLayout({children, params}: {
                     <Image src="/images/icons/github-mark-white.svg" width={15} height={15} alt="GitHub"/>
                   </Link>
 
-                  <Link className={styles.other} href="/">
+                  <Link className={styles.other} href={`/${currentLocale}`}>
                     <Image src="/images/icons/home.svg" width={15} height={15} alt="Home"/>
                   </Link>
                 </div>
