@@ -1,0 +1,40 @@
+{
+  "Home": {
+    "title": "Felix Andrade May",
+    "content": "Graddedig o Cyfrifadureg o Brifysgol Aberystwyth"
+  },
+  "Contact": {
+    "title": "Cysylltu",
+    "email": "E-Bost"
+  },
+  "Documents": {
+    "title": "Dogfennau",
+    "download": "Lawrlwytha Fy",
+    "dissertation": "Traethawd",
+    "cv": "CV Lawn",
+    "cbi_report": "Gwerthuso Cynulliadau Metagenomig",
+    "paper": "Papur"
+  },
+  "PostsHomePage": {
+    "title": "Postiadau"
+  },
+  "Settings": {
+    "title": "Gosodiadau",
+    "declaration_start": "Adeiladwyd y wefan hon gyda ",
+    "declaration_nextjs": "Next.js",
+    "declaration_mid": " mewn ",
+    "declaration_ts": "TypeScript"
+  },
+  "Layout": {
+    "contact_button": "Cysylltu",
+    "documents_button": "Dogfennau",
+    "posts_button": "Postiadau",
+    "webring": "Gwe-gylch Aber"
+  },
+  "ToggleThemeButton": {
+    "content": "Toglo'r Thema"
+  },
+  "ToggleLocaleButton": {
+    "content": "Switch to English"
+  }
+}

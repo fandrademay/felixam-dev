@@ -1,4 +1,3 @@
-// components/ToggleThemeButton/index.jsx
 'use client'
 
 import React, { useContext } from 'react';
@@ -6,11 +5,14 @@ import { useTheme } from '@designcise/next-theme-toggle';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from "../../page.module.css";
+import styles from "../../../app/[locale]/page.module.css";
+
+import { useTranslations } from 'next-intl';
 
 
 export default function ToggleThemeButton() {
   const { toggleTheme } = useTheme()
+  const t = useTranslations('ToggleThemeButton')
 
   return (
     // <div className={styles.toggle_switch}>
@@ -24,7 +26,7 @@ export default function ToggleThemeButton() {
       <a className={styles.major} onClick={toggleTheme}>
           <Image className={styles.inverting} src="/images/icons/theme.svg" 
                   width={20} height={20} alt="Change Theme"/>
-            Change Theme
+            {t('content')}
       </a>
     </div>
   );
