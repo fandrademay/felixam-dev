@@ -95,7 +95,7 @@ export default async function LocaleLayout({children, params}: {
                     <Image src="/images/icons/github-mark-white.svg" width={15} height={15} alt="GitHub"/>
                   </Link>
 
-                  <Link className={styles.other} href={`/${currentLocale}`}>
+                  <Link className={styles.other} href={`/${await getLocale()}/`}>)
                     <Image src="/images/icons/home.svg" width={15} height={15} alt="Home"/>
                   </Link>
                 </div>
