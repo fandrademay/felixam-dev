@@ -1,0 +1,40 @@
+{
+  "Home": {
+    "title": "Felix Andrade May",
+    "content": "A Computer Science Graduate of Aberystwyth University"
+  },
+  "Contact": {
+    "title": "Contact",
+    "email": "E-Mail"
+  },
+  "Documents": {
+    "title": "Documents",
+    "download": "Download My",
+    "dissertation": "Dissertation Thesis",
+    "cv": "Full CV",
+    "cbi_report": "Evaluating Metagenomic Assemblies",
+    "paper": "Paper"
+  },
+  "PostsHomePage": {
+    "title": "Posts"
+  },
+  "Settings": {
+    "title": "Settings",
+    "declaration_start": "This website was built with ",
+    "declaration_nextjs": "Next.js",
+    "declaration_mid": " in ",
+    "declaration_ts": "TypeScript"
+  },
+  "Layout": {
+    "contact_button": "Contact",
+    "documents_button": "Documents",
+    "posts_button": "Posts",
+    "webring": "Aber Webring"
+  },
+  "ToggleThemeButton": {
+    "content": "Toggle Theme"
+  },
+  "ToggleLocaleButton": {
+    "content": "Newid i Gymraeg"
+  }
+}
