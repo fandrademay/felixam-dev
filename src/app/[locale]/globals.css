@@ -10,6 +10,7 @@
   --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
   --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
   --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
+  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
 
   --background: var(--background-colour);
   --foreground: var(--secondary-colour);
@@ -33,6 +34,7 @@
   --minor_inverting_filter_hover: invert(31%) sepia(29%) saturate(1868%) hue-rotate(169deg) brightness(95%) contrast(86%);
   --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
   --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
+  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
 
   background: var(--background-colour)
 }

@@ -22,7 +22,7 @@ export default function ToggleThemeButton() {
     //   </label>
     //   <h3 className={styles.h3}>Toggle Theme</h3>
     // </div>  
-    <div className={styles.ctas}>
+    <div className={styles.settings_button}>
       <a className={styles.major} onClick={toggleTheme}>
           <Image className={styles.inverting} src="/images/icons/theme.svg" 
                   width={20} height={20} alt="Change Theme"/>
