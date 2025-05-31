@@ -23,7 +23,7 @@ export default function ToggleLocaleButton() {
   const locale = useLocale();
 
   return (
-    <div className={styles.ctas}>
+    <div className={styles.settings_button}>
       <a className={styles.major} href={`/${ToggleLocale(locale)}/settings`}>
           <Image className={styles.inverting} src="/images/icons/translate.svg" 
                   width={20} height={20} alt="Change Locale"/>

@@ -10,6 +10,13 @@
   --secondary-colour: #d4472d;
   --tertiary-colour: #e9a752;
   --quaternary-colour: #78614d;
+  --major_inverting_filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --major_inverting_filter_hover: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
+  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
+  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -29,6 +36,13 @@
 
   --background: var(--background-colour);
   --foreground: var(--secondary-colour);
+  --major_inverting_filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --major_inverting_filter_hover: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
+  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
+  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -185,7 +199,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-    filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--major_inverting_filter);
   color: var(--tertiary-colour);
 }
 
@@ -195,11 +209,63 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--major_inverting_filter_hover);
   color: var(--secondary-colour);
 }
 
 .ctas a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--secondary-colour);
+}
+
+.settings_button a {
+  appearance: none;
+  border-radius: 64px;
+  height: 48px;
+  padding: 0 20px;
+  border: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.settings_button a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--tertiary-colour);
+  gap: 8px;
+}
+
+.settings_button a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+.settings_button a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter_hover);
+  color: var(--secondary-colour);
+}
+
+.settings_button a.major:hover {
   border-color: var(--tertiary-colour);
   background: var(--tertiary-colour);
   color: var(--secondary-colour);
@@ -221,7 +287,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--minor_inverting_filter);
   color: var(--secondary-colour);
 }
 
@@ -231,17 +297,17 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--minor_inverting_filter_hover);
   color: var(--tertiary-colour);
 }
 
-a.pdf_button {
+.ctas a.pdf_button {
   border-color:var(--secondary-colour);
   background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
   width: 250px;
-  color: #fff;
+  color: var(--tertiary-colour);
   display: grid;
   gap: 16px;
   grid-template-columns: auto;
@@ -249,10 +315,10 @@ a.pdf_button {
   text-align: center;
 }
 
-a.pdf_button:hover {
+.ctas a.pdf_button:hover {
   border-color: var(--secondary-colour);
   background-color: var(--secondary-colour);
-  color: #ffffff;
+  color: var(--tertiary-colour);
   gap: 16px;
   transition:
     background 0.1s,
@@ -277,10 +343,6 @@ a.pdf_button:hover {
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.1s,
-    color 0.1s,
-    border-color 0.1s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -290,6 +352,20 @@ a.pdf_button:hover {
   font-weight: 500;
 }
 
+.ctas_mobile a.other {
+  border-color: var(--secondary-colour);
+  color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
+}
+
+.ctas_mobile a.other:hover {
+  background-color: var(--tertiary-colour);
+  border-color: var(--tertiary-colour);
+}
+
+.ctas_mobile a.other .inverting{
+  filter: var(--white_filter);
+}
 
 .header {
   grid-row-start: 3;
@@ -349,7 +425,7 @@ a.pdf_button:hover {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--minor_inverting_filter);
   color: var(--secondary-colour);
 }
 
@@ -358,7 +434,7 @@ a.pdf_button:hover {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--minor_inverting_filter_hover);
   color: var(--tertiary-colour);
 }
 
@@ -440,6 +516,10 @@ a.pdf_button:hover {
   a.pdf_button {
     display: flex;
   }
+
+  a.settings_button {
+    display: flex;
+  }
 }
 
 @media (min-width: 601px ) {
@@ -510,15 +590,7 @@ a.minor .inverting{
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: 
-    brightness(0) 
-    saturate(100%) 
-    invert(77%) 
-    sepia(42%) 
-    saturate(657%) 
-    hue-rotate(332deg) 
-    brightness(97%) 
-    contrast(94%);
+  filter: var(--minor_filter);
 }
 /* for the SVG */
 a.minor:hover .inverting {
@@ -526,13 +598,7 @@ a.minor:hover .inverting {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter:
-    invert(89%) 
-    sepia(100%) 
-    saturate(46%) 
-    hue-rotate(326deg) 
-    brightness(111%) 
-    contrast(111%);
+  filter: var(--minor_filter_hover);
 }
 
 a.other {
