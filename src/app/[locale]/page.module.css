@@ -10,6 +10,12 @@
   --secondary-colour: #d4472d;
   --tertiary-colour: #e9a752;
   --quaternary-colour: #78614d;
+  --major_inverting_filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --major_inverting_filter_hover: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
+  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -29,6 +35,12 @@
 
   --background: var(--background-colour);
   --foreground: var(--secondary-colour);
+  --major_inverting_filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --major_inverting_filter_hover: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
+  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -185,7 +197,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-    filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--major_inverting_filter);
   color: var(--tertiary-colour);
 }
 
@@ -195,7 +207,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--major_inverting_filter_hover);
   color: var(--secondary-colour);
 }
 
@@ -221,7 +233,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--minor_inverting_filter);
   color: var(--secondary-colour);
 }
 
@@ -231,7 +243,7 @@
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--minor_inverting_filter_hover);
   color: var(--tertiary-colour);
 }
 
@@ -349,7 +361,7 @@ a.pdf_button:hover {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
+  filter: var(--minor_inverting_filter);
   color: var(--secondary-colour);
 }
 
@@ -358,7 +370,7 @@ a.pdf_button:hover {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
+  filter: var(--minor_inverting_filter_hover);
   color: var(--tertiary-colour);
 }
 
@@ -510,15 +522,7 @@ a.minor .inverting{
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter: 
-    brightness(0) 
-    saturate(100%) 
-    invert(77%) 
-    sepia(42%) 
-    saturate(657%) 
-    hue-rotate(332deg) 
-    brightness(97%) 
-    contrast(94%);
+  filter: var(--minor_filter);
 }
 /* for the SVG */
 a.minor:hover .inverting {
@@ -526,13 +530,7 @@ a.minor:hover .inverting {
     background 0.1s,
     color 0.1s,
     border-color 0.1s;
-  filter:
-    invert(89%) 
-    sepia(100%) 
-    saturate(46%) 
-    hue-rotate(326deg) 
-    brightness(111%) 
-    contrast(111%);
+  filter: var(--minor_filter_hover);
 }
 
 a.other {
