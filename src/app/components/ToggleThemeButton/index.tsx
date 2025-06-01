@@ -1,9 +1,7 @@
 'use client'
 
-import React, { useContext } from 'react';
 import { useTheme } from '@designcise/next-theme-toggle';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import styles from "../../../app/[locale]/page.module.css";
 
