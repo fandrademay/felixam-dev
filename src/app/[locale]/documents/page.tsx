@@ -47,7 +47,7 @@ export default function Documents({params}:{params: Promise<{locale: string}>;})
               </div>
               <div className={styles.container}>
                 {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
-                {t('download')} <i>'{t('cbi_report')}'</i> {t('paper')}
+                {t('download')} <i>&lsquo;{t('cbi_report')}&rsquo;</i> {t('paper')}
               </div>
             </Link>
             
@@ -85,7 +85,7 @@ export default function Documents({params}:{params: Promise<{locale: string}>;})
                 </div>
                 <div className={styles.container}>
                   {/* <Image src="download.svg" width={20} height={20} alt="Download"/> */}
-                  {t('download')} <i>'{t('cbi_report')}'</i> {t('paper')}
+                  {t('download')} <i>&lsquo;{t('cbi_report')}&rsquo;</i> {t('paper')}
                 </div>
               </Link>
             </div>

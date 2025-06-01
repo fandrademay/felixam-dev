@@ -307,7 +307,7 @@
   border-radius: 6px;
   height: 400px;
   width: 250px;
-  color: var(--tertiary-colour);
+  color: var(--secondary-colour);
   display: grid;
   gap: 16px;
   grid-template-columns: auto;

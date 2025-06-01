@@ -4,16 +4,15 @@ import Image from 'next/image';
 import styles from "../../../app/[locale]/page.module.css";
 
 import { useLocale, useTranslations } from 'next-intl';
-import {routing} from '@/i18n/routing';
 
 
 export function ToggleLocale(locale: string){
   if (locale === 'en'){
-    let newLocale = 'cy'
+    const newLocale = 'cy'
     return(newLocale)
   }
   if (locale === 'cy'){
-    let newLocale = 'en'
+    const newLocale = 'en'
     return(newLocale)
   }
 }

@@ -33,19 +33,19 @@ export default async function LocaleLayout({children, params}: {
             <main className={styles.main}>
               <div className={styles.header}>
                 <div className={styles.ctas}>
-                  <Link className={styles.major} href="/contact" prefetch={true} replace={true}>
+                  <Link className={styles.major} href={`/${currentLocale}/contact`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/contact.svg" 
                             width={20} height={20} alt="Contact"/>
                     {t('contact_button')}
                   </Link>
                   
-                  <Link className={styles.minor} href="/documents" prefetch={true} replace={true}>
+                  <Link className={styles.minor} href={`/${currentLocale}/documents`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/file.svg" 
                             width={20} height={20} alt="Documents"/>
                     {t('documents_button')}
                   </Link>
 
-                  <Link className={styles.minor} href="/posts" prefetch={true} replace={true}>
+                  <Link className={styles.minor} href={`/${currentLocale}/posts`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/posts.svg" 
                             width={20} height={20} alt="Posts"/>
                     {t('posts_button')}
@@ -70,17 +70,17 @@ export default async function LocaleLayout({children, params}: {
                 </div>
 
                 <div className={styles.ctas_mobile}>
-                  <Link className={styles.other} href="/contact" prefetch={true} replace={true}>
+                  <Link className={styles.other} href={`/${currentLocale}/contact`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/contact.svg" 
                             width={15} height={15} alt="Contact"/>
                   </Link>
                   
-                  <Link className={styles.other} href="/documents" prefetch={true} replace={true}>
+                  <Link className={styles.other} href={`/${currentLocale}/documents`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/file.svg" 
                             width={15} height={15} alt="Documents"/>
                   </Link>
 
-                  <Link className={styles.other} href="/posts" prefetch={true} replace={true}>
+                  <Link className={styles.other} href={`/${currentLocale}/posts`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/posts.svg" 
                             width={15} height={15} alt="Posts"/>
                   </Link>
@@ -95,7 +95,7 @@ export default async function LocaleLayout({children, params}: {
                     <Image src="/images/icons/github-mark-white.svg" width={15} height={15} alt="GitHub"/>
                   </Link>
 
-                  <Link className={styles.other} href={`/${await getLocale()}/`}>
+                  <Link className={styles.other} href={`/${currentLocale}/`}>
                     <Image src="/images/icons/home.svg" width={15} height={15} alt="Home"/>
                   </Link>
                 </div>

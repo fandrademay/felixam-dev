@@ -77,10 +77,10 @@ export async function backButton(id: string): Promise<string>{
   }
 
   if (postIndex === 0) {
-    let href_link = `/posts`
+    const href_link = `/posts`
     return href_link
   } else {
-    let href_link = `/posts/${allPosts[postIndex-1].id}`
+    const href_link = `/posts/${allPosts[postIndex-1].id}`
     return encodeURI(href_link)
   }
 
@@ -101,10 +101,10 @@ export async function forwardButton(id: string): Promise<string>{
   }
 
   if (postIndex === (allPosts.length)-1) {
-    let href_link = `/posts/${allPosts[0].id}`
+    const href_link = `/posts/${allPosts[0].id}`
     return encodeURI(href_link)
   } else {
-    let href_link = `/posts/${allPosts[++postIndex]?.id}`
+    const href_link = `/posts/${allPosts[++postIndex]?.id}`
     return encodeURI(href_link)
   }
 
