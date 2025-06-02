@@ -11,6 +11,7 @@ export const postsFolder = path.join(process.cwd(), 'posts')
 
 export async function readAllPostsFiles() {
   const dirEntries = await fs.promises.readdir(postsFolder, { recursive: true, withFileTypes: true })
+  console.log("DEBUG", dirEntries)
   return dirEntries.filter(entry => entry.isFile())
 }
 

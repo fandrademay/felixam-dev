@@ -11,6 +11,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeStringify from 'rehype-stringify'
 import remarkDirective from 'remark-directive'
 import remarkFrontmatter from 'remark-frontmatter'
+import rehypeHighlight from 'rehype-highlight'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'
@@ -20,6 +21,7 @@ import {unified} from 'unified'
 
 export async function generateStaticParams() {
   const entries = await readAllPostsFiles() 
+ 
   return entries.map((entry) => ({
     id: parseFileId(entry),
   }))
@@ -59,6 +61,7 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   .use(remarkMath)
   .use(remarkHtml)
   .use(remarkRehype, {allowDangerousHtml: true})
+  .use(rehypeHighlight)
   .use(rehypeRaw)
   .use(rehypeFormat)
   .use(rehypeStringify)

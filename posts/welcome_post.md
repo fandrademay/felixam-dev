@@ -40,6 +40,7 @@ A table:
 
 ```js
 console.log('Hi pluto!')
+export default function badNames(){}
 ```
 
 </details>
