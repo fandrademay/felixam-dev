@@ -26,7 +26,7 @@ export default async function LocaleLayout({children, params}: {
   const t = await getTranslations('Layout');
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider>
           <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
