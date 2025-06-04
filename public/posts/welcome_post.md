@@ -20,7 +20,7 @@ In the 1840s,
 used Newtonian mechanics to predict the position of the
 then-undiscovered planet
 [Neptune](https://wikipedia.org/wiki/Neptune)
-after analyzing perturbations in the orbit of
+after analysing perturbations in the orbit of
 [Uranus](https://wikipedia.org/wiki/Uranus).
 
 ***

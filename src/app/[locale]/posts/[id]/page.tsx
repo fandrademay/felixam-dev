@@ -19,15 +19,15 @@ import remarkRehype from 'remark-rehype'
 import {unified} from 'unified'
 
 
-export async function generateStaticParams() {
-  const entries = await readAllPostsFiles() 
+// export async function generateStaticParams() {
+//   const entries = await readAllPostsFiles() 
  
-  return entries.map((entry) => ({
-    id: parseFileId(entry),
-  }))
-}
+//   return entries.map((entry) => ({
+//     id: parseFileId(entry),
+//   }))
+// }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }>}) {
   const { id } = await params
