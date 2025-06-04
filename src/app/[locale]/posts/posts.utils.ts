@@ -8,15 +8,17 @@ import { cache } from 'react'
 
 
 export const postsFolder = path.join(process.cwd(), 'posts')
+console.log("DEBUG postsFolder", postsFolder)
 
 export async function readAllPostsFiles() {
   const dirEntries = await fs.promises.readdir(postsFolder, { recursive: true, withFileTypes: true })
-  console.log("DEBUG", dirEntries)
+  console.log("DEBUG dirEntries", dirEntries)
   return dirEntries.filter(entry => entry.isFile())
 }
 
 export async function getAllPosts() {
   const postFiles = await readAllPostsFiles()
+  console.log("DEBUG postFiles", postFiles)
   return Promise.all(postFiles.map(mapFileToPosts))
 }
 

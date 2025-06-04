@@ -66,7 +66,7 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   .use(rehypeFormat)
   .use(rehypeStringify)
 
-  const htmlContent = await (await processor.process(post.content)).toString()
+  const htmlContent = (await processor.process(post.content)).toString()
 
   
   return (
