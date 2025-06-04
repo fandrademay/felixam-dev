@@ -3,7 +3,7 @@ import '../../fonts.css';
 
 import Link from "next/link";
 
-import { backButton, forwardButton, getPostsById, parseFileId, readAllPostsFiles } from "../posts.utils";
+import { backButton, forwardButton, getPostsById } from "../posts.utils";
 
 import remarkHtml from 'remark-html'
 import rehypeFormat from 'rehype-format'
