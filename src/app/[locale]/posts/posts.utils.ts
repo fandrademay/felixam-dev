@@ -7,7 +7,7 @@ import { cache } from 'react'
 
 
 
-export const postsFolder = path.join(process.cwd(), 'posts')
+export const postsFolder = path.join(process.cwd(), 'public/posts')
 console.log("DEBUG postsFolder", postsFolder)
 
 export async function readAllPostsFiles() {
