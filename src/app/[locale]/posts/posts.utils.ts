@@ -7,7 +7,7 @@ import { cache } from 'react'
 
 
 
-export const postsFolder = path.join(process.cwd(), 'posts')
+export const postsFolder = path.join(process.cwd(), 'public/posts')
 
 export async function readAllPostsFiles() {
   const dirEntries = await fs.promises.readdir(postsFolder, { recursive: true, withFileTypes: true })
@@ -30,7 +30,6 @@ export async function getPostsById(id: string): Promise<Posts | undefined> {
   if (!postFile) return undefined
   return mapFileToPosts(postFile)
 }
-
 
 export async function mapFileToPosts(file: fs.Dirent): Promise<Posts> {
   const fileContents = await fs.promises.readFile(getFilePath(file), { encoding: 'utf8' })
@@ -83,7 +82,6 @@ export async function backButton(id: string): Promise<string>{
     const href_link = `/posts/${allPosts[postIndex-1].id}`
     return encodeURI(href_link)
   }
-
 }
 
 export async function forwardButton(id: string): Promise<string>{
@@ -107,5 +105,4 @@ export async function forwardButton(id: string): Promise<string>{
     const href_link = `/posts/${allPosts[++postIndex]?.id}`
     return encodeURI(href_link)
   }
-
 }

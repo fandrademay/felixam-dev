@@ -52,6 +52,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "mini-css-extract-plugin": "^2.9.2",
     "react-burger-menu": "^3.1.0",
+    "rehype-highlight": "^7.0.2",
     "trim-newlines": "^5.0.0",
     "typescript": "^5"
   }
