@@ -3,13 +3,9 @@ import Link from "next/link";
 import styles from "../page.module.css";
 import '../fonts.css';
 import { useTranslations } from "next-intl";
-import { use } from "react";
-import { setRequestLocale } from "next-intl/server";
 
-export default function Documents({params}:{params: Promise<{locale: string}>;}) {
-  const { locale } = use(params);
- 
-  setRequestLocale(locale);
+
+export default function Documents() {
   const t = useTranslations('Documents');
   
   return (

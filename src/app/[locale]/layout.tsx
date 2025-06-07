@@ -13,11 +13,10 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 
-export default async function LocaleLayout({children, params}: {
+export default async function LocaleLayout({children}: {
   children: React.ReactNode; 
-  params: Promise<{locale: string}>;
 } ) {
-  const {locale} = await params;
+  const locale = await getLocale();
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -35,7 +34,7 @@ export default async function LocaleLayout({children, params}: {
                 <div className={styles.ctas}>
                   <Link className={styles.major} href={`/${currentLocale}/contact`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/contact.svg" 
-                            width={20} height={20} alt="Contact"/>
+                            width={20} height={20} alt="Contact!"/>
                     {t('contact_button')}
                   </Link>
                   
