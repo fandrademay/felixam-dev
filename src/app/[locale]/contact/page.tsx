@@ -1,14 +1,12 @@
 import styles from "../page.module.css";
 import '../fonts.css';
 import { useTranslations } from "next-intl";
-import { use } from "react";
-import { setRequestLocale } from "next-intl/server";
 
-export default function Contact({params}:{params: Promise<{locale: string}>;}) {
-  const { locale } = use(params);
- 
-  setRequestLocale(locale);
+
+export default function Contact() {
+
   const t = useTranslations('Contact');
+
   return (
     <div className={styles.page}>      
       <div className={styles.main}>
