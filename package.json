@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component"
   },
   "dependencies": {
     "@designcise/next-theme-toggle": "^4.0.0",
@@ -46,11 +51,13 @@
     "@types/react": "^19",
     "@types/react-burger-menu": "^2.8.7",
     "@types/react-dom": "^19",
+    "cypress": "^14.4.1",
     "eslint": "^9.28.0",
     "eslint-config-next": "15.1.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "mini-css-extract-plugin": "^2.9.2",
+    "netlify-plugin-cypress": "^2.2.1",
     "react-burger-menu": "^3.1.0",
     "rehype-highlight": "^7.0.2",
     "trim-newlines": "^5.0.0",
