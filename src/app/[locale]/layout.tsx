@@ -34,7 +34,7 @@ export default async function LocaleLayout({children}: {
                 <div className={styles.ctas}>
                   <Link className={styles.major} href={`/${currentLocale}/contact`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/contact.svg" 
-                            width={20} height={20} alt="Contact!"/>
+                            width={20} height={20} alt="Contact"/>
                     {t('contact_button')}
                   </Link>
                   
