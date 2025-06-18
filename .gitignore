@@ -2,7 +2,7 @@
 
 colour_notes.txt
 /.vscode/
-/cypress/
+/cypress/downloads/
 
 # dependencies
 /node_modules
