@@ -13,11 +13,10 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 
-export default async function LocaleLayout({children, params}: {
+export default async function LocaleLayout({children}: {
   children: React.ReactNode; 
-  params: Promise<{locale: string}>;
 } ) {
-  const {locale} = await params;
+  const locale = await getLocale();
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
