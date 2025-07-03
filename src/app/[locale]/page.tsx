@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.main}>
         <h1>{t('title')}</h1>
-        <h3>{t('content')}</h3>
+        <h2>{t('content')}</h2>
       </div>
     </div>
   );

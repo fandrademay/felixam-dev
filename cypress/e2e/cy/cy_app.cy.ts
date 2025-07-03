@@ -5,7 +5,7 @@ describe('CY Home Page Content', () => {
 
   it('should load the home page', () => {
     cy.get('h1').contains("Felix Andrade May").should('be.visible')
-    cy.get('h3').contains("Graddedig o Cyfrifadureg o Brifysgol Aberystwyth").should('be.visible')
+    cy.get('h2').contains("Graddedig o Cyfrifadureg o Brifysgol Aberystwyth").should('be.visible')
   })
 
   it('should render header buttons', () => {
