@@ -28,6 +28,12 @@ export default async function LocaleLayout({children}: {
     <html lang={locale} suppressHydrationWarning>
       <head>
         <title>Felix Andrade May</title>
+        <meta name="charset"      content="UTF-8" />
+        <meta name="description"  content="Felix Andrade May's Portfolio Site" />
+        <meta name="author"       content="Felix Andrade May" />
+        <meta name="keywords"     content="Felix Andrade May, portfolio, website, bioinformatics, computer science, python, typescript, nextjs, python3.0, Felix, Andrade, May, computing, Aberystwyth, Devon, Plymouth, Developer, Backend, Docker, Frontend, C++, C, Machine Learning, Artificial Intelligence, ML/AI, ML, AI, Developer, Software Developer" />
+        <meta name="keywords"     content="Portffolio, Gwefan, Biowybodeg, Cyfrifadureg, Cyfrifiadura, Datblygwr Meddalwedd, Datblygwr, Cefn, Blaen, Dysgu Peirianyddol, Deallusrwydd Artiffisial" />
+        <meta name="viewport"     content="width=device-width, initial-scale=1" />
       </head>
       <body>
         <NextIntlClientProvider>
