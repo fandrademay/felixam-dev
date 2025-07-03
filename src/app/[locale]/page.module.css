@@ -127,13 +127,13 @@
 
 .main li {
   margin-bottom: 8px;
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
 .main ul {
   font-family: spaceGrotesk;
   padding-inline-start: 16px;
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
 .main code {
@@ -219,11 +219,89 @@
   color: var(--secondary-colour);
 }
 
+.contact_options {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 16px;
+  align-items: center;
+  align-content: center;
+}
+
+.contact_options a {
+  appearance: none;
+  border-radius: 64px;
+  height: 48px;
+  padding: 0 26px;
+  border: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.contact_options a.other {
+  border-color: var(--secondary-colour);
+  color: var(--secondary-colour);
+  background-color: var(--secondary-colour);
+  height: 58px;
+}
+
+.contact_options a.other:hover {
+  background-color: var(--tertiary-colour);
+  border-color: var(--tertiary-colour);
+}
+
+.contact_options a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--tertiary-colour);
+  gap: 8px;
+  padding: 26px;
+}
+
+.contact_options a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+.contact_options a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter_hover);
+  color: var(--secondary-colour);
+}
+
+.contact_options a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--secondary-colour);
+}
+
+.settings_button {
+  align-items: center;
+}
+
 .settings_button a {
   appearance: none;
   border-radius: 64px;
   height: 48px;
-  padding: 0 20px;
+  padding: 0 26px;
   border: none;
   border: 1px solid transparent;
   transition:
@@ -244,6 +322,7 @@
   background: var(--secondary-colour);
   color: var(--tertiary-colour);
   gap: 8px;
+  padding: 26px;
 }
 
 .settings_button a.major .inverting{
@@ -333,13 +412,15 @@
 
 .ctas_mobile {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   gap: 16px;
 }
 
 .ctas_mobile a {
   appearance: none;
   border-radius: 64px;
-  height: 48px;
+  height: 58px;
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
@@ -356,6 +437,7 @@
   border-color: var(--secondary-colour);
   color: var(--secondary-colour);
   background-color: var(--secondary-colour);
+  height: 58px;
 }
 
 .ctas_mobile a.other:hover {
@@ -383,7 +465,7 @@
   position: relative;
   right:0px;
   top: 0px;
-  gap: 8px
+  gap: 16px
 }
 
 .header a {
@@ -468,7 +550,7 @@
   }
 }
 
-@media (max-width: 600px ) {
+@media (max-width: 710px ) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
@@ -476,6 +558,7 @@
 
   .main {
     align-items: center;
+    text-align: center;
   }
 
   .main h1 {
@@ -520,9 +603,13 @@
   a.settings_button {
     display: flex;
   }
+
+  .footer div.webring {
+    gap: 48px;
+  }
 }
 
-@media (min-width: 601px ) {
+@media (min-width: 710px ) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
@@ -532,17 +619,17 @@
     align-items: center;
   }
 
+  .social_media {
+    display: none;
+  }
+
   .main ol {
     text-align: center;
   }
 
-  .ctas_mobile {
-    flex-direction: column;
-  }
-
   .ctas_mobile a {
     font-size: 14px;
-    height: 40px;
+    height: 48px;
     padding: 0 16px;
   }
 
