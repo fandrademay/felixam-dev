@@ -28,6 +28,7 @@ export default async function LocaleLayout({children}: {
     <html lang={locale} suppressHydrationWarning>
       <head>
         <title>Felix Andrade May</title>
+        
         <meta name="charset"      content="UTF-8" />
         <meta name="theme-color"  content="#ACCAB2"/>
         <meta name="description"  content="Felix Andrade May's Portfolio Site" />
@@ -36,6 +37,7 @@ export default async function LocaleLayout({children}: {
         <meta name="keywords"     content="Portffolio, Gwefan, Biowybodeg, Cyfrifadureg, Cyfrifiadura, Datblygwr Meddalwedd, Datblygwr, Cefn, Blaen, Dysgu Peirianyddol, Deallusrwydd Artiffisial" />
         <meta name="viewport"     content="width=device-width, initial-scale=1" />
       </head>
+      
       <body>
         <NextIntlClientProvider>
           <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
@@ -92,16 +94,6 @@ export default async function LocaleLayout({children}: {
                   <Link className={styles.other} href={`/${currentLocale}/posts`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/posts.svg" 
                             width={24} height={24} alt="Posts"/>
-                  </Link>
-                  
-                  <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
-                        target="_blank" rel="noopener noreferrer">
-                    <Image src="/images/icons/linkedin-White-34.png" width={24} height={24} alt="LinkedIn"/>
-                  </Link>
-
-                  <Link className={styles.other} href="https://github.com/fandrademay" 
-                        target="_blank" rel="noopener noreferrer">
-                    <Image src="/images/icons/github-mark-white.svg" width={24} height={24} alt="GitHub"/>
                   </Link>
 
                   <Link className={styles.other} href={`/${currentLocale}/`}>
