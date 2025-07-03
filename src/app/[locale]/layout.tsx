@@ -26,6 +26,9 @@ export default async function LocaleLayout({children}: {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <title>Felix Andrade May</title>
+      </head>
       <body>
         <NextIntlClientProvider>
           <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
