@@ -18,6 +18,9 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import {unified} from 'unified'
 
+import { notFound } from 'next/navigation'
+
+
 
 // export async function generateStaticParams() {
 //   const entries = await readAllPostsFiles() 
@@ -33,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params
   const post = await getPostsById(id)
 
-  if (!post) return {}
+  if (!post) { notFound() }
 
   return {
     title: post.title,
@@ -51,8 +54,8 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
   const { id } = await params;
   const post = await getPostsById(id)
   
-  if (!post) return
-
+  if (!post) { notFound() }
+ 
   const processor = unified()
   .use(remarkParse)
   .use(remarkDirective)

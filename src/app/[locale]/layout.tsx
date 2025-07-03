@@ -12,6 +12,9 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function LocaleLayout({children}: {
   children: React.ReactNode; 
@@ -20,7 +23,9 @@ export default async function LocaleLayout({children}: {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  // enable static rendering
   setRequestLocale(locale);
+
   const currentLocale = await getLocale();
   const t = await getTranslations('Layout');
 

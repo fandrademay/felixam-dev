@@ -37,5 +37,9 @@
   },
   "ToggleLocaleButton": {
     "content": "Newid i Gymraeg"
+  },
+  "NotFound": {
+    "title": "404",
+    "content": "oh, there is nothing here."
   }
 }
