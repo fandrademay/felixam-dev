@@ -29,6 +29,7 @@ export default async function LocaleLayout({children}: {
       <head>
         <title>Felix Andrade May</title>
         <meta name="charset"      content="UTF-8" />
+        <meta name="theme-color"  content="#ACCAB2"/>
         <meta name="description"  content="Felix Andrade May's Portfolio Site" />
         <meta name="author"       content="Felix Andrade May" />
         <meta name="keywords"     content="Felix Andrade May, portfolio, website, bioinformatics, computer science, python, typescript, nextjs, python3.0, Felix, Andrade, May, computing, Aberystwyth, Devon, Plymouth, Developer, Backend, Docker, Frontend, C++, C, Machine Learning, Artificial Intelligence, ML/AI, ML, AI, Developer, Software Developer" />
