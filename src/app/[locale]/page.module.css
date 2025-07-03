@@ -603,6 +603,10 @@
   a.settings_button {
     display: flex;
   }
+
+  .footer div.webring {
+    gap: 48px;
+  }
 }
 
 @media (min-width: 710px ) {
@@ -615,12 +619,12 @@
     align-items: center;
   }
 
-  .main ol {
-    text-align: center;
+  .social_media {
+    display: none;
   }
 
-  .ctas_mobile {
-    flex-direction: column;
+  .main ol {
+    text-align: center;
   }
 
   .ctas_mobile a {

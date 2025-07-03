@@ -108,7 +108,7 @@ export default async function LocaleLayout({children}: {
             <footer className={styles.footer}>
               <div className={styles.settings_access}>
                 <Link href="/settings" prefetch={true} replace={true}>
-                  <Image className={styles.settings_icon} src="/images/icons/settings.svg" width={30} height={30} alt="Settings"/>
+                  <Image className={styles.settings_icon} src="/images/icons/settings.svg" width={24} height={24} alt="Settings"/>
                 </Link>
               </div>
               <div className={styles.webring}>

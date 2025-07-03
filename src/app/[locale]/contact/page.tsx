@@ -21,18 +21,20 @@ export default function Contact() {
             f.andrademay@gmail.com
           </Link>
         </div>
-    
-        <h2>{t('social_media')}:</h2>
-        <div className={styles.contact_options}>
-          <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
-                target="_blank" rel="noopener noreferrer">
-            <Image src="/images/icons/linkedin-White-34.png" width={24} height={24} alt="LinkedIn"/>
-          </Link>
 
-          <Link className={styles.other} href="https://github.com/fandrademay" 
-                target="_blank" rel="noopener noreferrer">
-            <Image src="/images/icons/github-mark-white.svg" width={24} height={24} alt="GitHub"/>
-          </Link>
+        <div className={styles.social_media}>
+          <h2>{t('social_media')}:</h2>
+          <div className={styles.contact_options}>
+            <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
+                  target="_blank" rel="noopener noreferrer">
+              <Image src="/images/icons/linkedin-White-34.png" width={24} height={24} alt="LinkedIn"/>
+            </Link>
+
+            <Link className={styles.other} href="https://github.com/fandrademay" 
+                  target="_blank" rel="noopener noreferrer">
+              <Image src="/images/icons/github-mark-white.svg" width={24} height={24} alt="GitHub"/>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
