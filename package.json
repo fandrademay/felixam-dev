@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@designcise/next-theme-toggle": "^4.0.0",
-    "@netlify/plugin-nextjs": "^5.11.3",
+    "@netlify/plugin-nextjs": "^5.11.4",
     "@wojtekmaj/react-hooks": "^1.21.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.511.0",
