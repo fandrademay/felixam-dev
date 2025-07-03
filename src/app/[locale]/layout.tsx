@@ -80,31 +80,31 @@ export default async function LocaleLayout({children}: {
                 <div className={styles.ctas_mobile}>
                   <Link className={styles.other} href={`/${currentLocale}/contact`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/contact.svg" 
-                            width={15} height={15} alt="Contact"/>
+                            width={24} height={24} alt="Contact"/>
                   </Link>
                   
                   <Link className={styles.other} href={`/${currentLocale}/documents`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/file.svg" 
-                            width={15} height={15} alt="Documents"/>
+                            width={24} height={24} alt="Documents"/>
                   </Link>
 
                   <Link className={styles.other} href={`/${currentLocale}/posts`} prefetch={true} replace={true}>
                     <Image className={styles.inverting} src="/images/icons/posts.svg" 
-                            width={15} height={15} alt="Posts"/>
+                            width={24} height={24} alt="Posts"/>
                   </Link>
                   
                   <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
                         target="_blank" rel="noopener noreferrer">
-                    <Image src="/images/icons/linkedin-White-34.png" width={15} height={15} alt="LinkedIn"/>
+                    <Image src="/images/icons/linkedin-White-34.png" width={24} height={24} alt="LinkedIn"/>
                   </Link>
 
                   <Link className={styles.other} href="https://github.com/fandrademay" 
                         target="_blank" rel="noopener noreferrer">
-                    <Image src="/images/icons/github-mark-white.svg" width={15} height={15} alt="GitHub"/>
+                    <Image src="/images/icons/github-mark-white.svg" width={24} height={24} alt="GitHub"/>
                   </Link>
 
                   <Link className={styles.other} href={`/${currentLocale}/`}>
-                    <Image src="/images/icons/home.svg" width={15} height={15} alt="Home"/>
+                    <Image src="/images/icons/home.svg" width={24} height={24} alt="Home"/>
                   </Link>
                 </div>
               </div>

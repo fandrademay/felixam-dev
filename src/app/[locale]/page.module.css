@@ -127,13 +127,13 @@
 
 .main li {
   margin-bottom: 8px;
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
 .main ul {
   font-family: spaceGrotesk;
   padding-inline-start: 16px;
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
 .main code {
@@ -339,7 +339,7 @@
 .ctas_mobile a {
   appearance: none;
   border-radius: 64px;
-  height: 48px;
+  height: 58px;
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
@@ -356,6 +356,7 @@
   border-color: var(--secondary-colour);
   color: var(--secondary-colour);
   background-color: var(--secondary-colour);
+  height: 58px;
 }
 
 .ctas_mobile a.other:hover {
@@ -383,7 +384,7 @@
   position: relative;
   right:0px;
   top: 0px;
-  gap: 8px
+  gap: 16px
 }
 
 .header a {
@@ -476,6 +477,7 @@
 
   .main {
     align-items: center;
+    text-align: center;
   }
 
   .main h1 {
@@ -542,7 +544,7 @@
 
   .ctas_mobile a {
     font-size: 14px;
-    height: 40px;
+    height: 48px;
     padding: 0 16px;
   }
 
