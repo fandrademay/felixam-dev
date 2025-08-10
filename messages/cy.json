@@ -37,5 +37,9 @@
   },
   "ToggleLocaleButton": {
     "content": "Switch to English"
+  },
+  "NotFound": {
+    "title": "404",
+    "content": "oh, mae rheina dim yn yma"
   }
 }
