@@ -1,6 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/srcery.min.css');
 
-:root body {
+
+[data-theme='light'] body {
   --background-colour: #accab2;
   --secondary-colour: #d4472d;
   --tertiary-colour: #e9a752;
@@ -20,7 +21,7 @@
   background: var(--background-colour)
 }
 
-:root.dark body {
+[data-theme='dark'] body {
   --background-colour: #060f37;
   --secondary-colour: #e9a752;
   --tertiary-colour: #1E6496;

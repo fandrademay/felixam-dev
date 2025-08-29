@@ -1,6 +1,6 @@
-import '../globals.css';
-import '../fonts.css';
-import styles from "../page.module.css";
+import '../themes/globals.css';
+import '../themes/fonts.css';
+import styles from "../themes/page.module.css";
 
 import { useTranslations } from 'next-intl';
 import { use } from 'react';
@@ -20,6 +20,7 @@ export default function Settings({params}:{params: Promise<{locale: string}>;}) 
       <div className={styles.main}>
         <h1>{t('title')}</h1>
           <ToggleThemeButton/>
+          {/* <ThemeChanger/> */}
           <ToggleLocaleButton/>
         <p>{t('declaration_start')}<a href="https://nextjs.org/">{t('declaration_nextjs')}</a>{t('declaration_mid')}<a href="https://www.typescriptlang.org/">{t('declaration_ts')}</a>.</p>
       </div>

@@ -3,7 +3,7 @@
 import { useTheme } from '@designcise/next-theme-toggle';
 import Image from 'next/image';
 
-import styles from "../../../app/[locale]/page.module.css";
+import styles from "../../../app/[locale]/themes/page.module.css";
 
 import { useTranslations } from 'next-intl';
 

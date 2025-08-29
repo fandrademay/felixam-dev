@@ -1,5 +1,5 @@
-import styles from "../page.module.css";
-import '../fonts.css';
+import styles from "../themes/page.module.css";
+import '../themes/fonts.css';
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";

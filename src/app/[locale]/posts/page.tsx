@@ -1,6 +1,6 @@
 import Link from "next/link";
-import styles from "../page.module.css";
-import '../fonts.css';
+import styles from "../themes/page.module.css";
+import '../themes/fonts.css';
 import { getAllPosts, sortPosts } from './posts.utils'
 import { getTranslations } from "next-intl/server";
 

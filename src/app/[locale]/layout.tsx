@@ -1,5 +1,5 @@
-import "./globals.css";
-import styles from "./page.module.css";
+import "./themes/globals.css";
+import styles from "./themes/page.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
