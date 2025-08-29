@@ -5,7 +5,7 @@
 
 /* @import "global.css"; */
 
-[data-theme='light'] .page {
+.page {
   /* --button-primary-hover: #ccc;
   --button-secondary-hover: #d4472d;
   --background-colour: #accab2;
@@ -61,6 +61,11 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+}
+
+.main.settings {
+  width: 250%;
+  gap: 32px;
 }
 
 .main ol {
@@ -140,9 +145,9 @@
 
 .main code {
   font-family: inherit;
-  background: var(--quaternary-colour);
+  background: #1C1B19;
   padding: 2px 4px;
-  border-radius: 4px;
+  border-radius: 24px;
   font-weight: 600;
 }
 
@@ -188,6 +193,8 @@
   line-height: 20px;
   font-weight: 500;
 }
+
+
 
 .ctas a.major {
   border-color: var(--secondary-colour);
@@ -352,6 +359,8 @@
   color: var(--secondary-colour);
 }
 
+
+
 .ctas a.minor{
   border-color: var(--secondary-colour);
   min-width: 125px;
@@ -382,8 +391,36 @@
   color: var(--tertiary-colour);
 }
 
+
+
+
 .ctas a.pdf_button {
   border-color:var(--secondary-colour);
+  background-color: var(--secondary-colour);
+  border-radius: 6px;
+  height: 400px;
+  width: 250px;
+  color: var(--background-colour);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+
+.ctas a.pdf_button:hover {
+  border-color: var(--tertiary-colour);
+  background-color: var(--tertiary-colour);
+  color: var(--secondary-colour);
+  gap: 16px;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+}
+
+[data-theme='light'] .ctas a.pdf_button {
+  border-color:var(--tertiary-colour);
   background-color: var(--tertiary-colour);
   border-radius: 6px;
   height: 400px;
@@ -396,7 +433,7 @@
   text-align: center;
 }
 
-.ctas a.pdf_button:hover {
+[data-theme='light'] .ctas a.pdf_button:hover {
   border-color: var(--secondary-colour);
   background-color: var(--secondary-colour);
   color: var(--tertiary-colour);
@@ -406,7 +443,30 @@
     color 0.1s,
     border-color 0.1s;
 }
+[data-theme='high-contrast'] .ctas a.pdf_button {
+  border-color:var(--secondary-colour);
+  background-color: var(--secondary-colour);
+  border-radius: 6px;
+  height: 400px;
+  width: 250px;
+  color: var(--tertiary-colour);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
 
+[data-theme='high-contrast'] .ctas a.pdf_button:hover {
+  border-color: var(--tertiary-colour);
+  background-color: var(--tertiary-colour);
+  color: var(--secondary-colour);
+  gap: 16px;
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+}
 .container {
   display: inline-block;
   align-items: center;
@@ -831,3 +891,132 @@ input:hover:checked + .slider:before {
  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
  box-shadow: 0 0.3em 0 var(--outline_color);
 }
+
+[data-theme='srcery'] .ctas a.minor{
+  border-color: var(--secondary-colour);
+  min-width: 125px;
+}
+
+[data-theme='srcery'] .ctas a.minor:hover {
+  border-color: var(--secondary-colour);
+  color: var(--background-colour);
+  background-color: var(--secondary-colour);
+}
+
+[data-theme='srcery'] .ctas a.minor .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--minor_inverting_filter);
+  color: var(--secondary-colour);
+}
+
+/* for the SVG */
+[data-theme='srcery'] .ctas a.minor:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--minor_inverting_filter_hover);
+  color: var(--tertiary-colour);
+}
+
+[data-theme='srcery'] .ctas a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--background-colour);
+  gap: 8px;
+}
+
+[data-theme='srcery'] .ctas a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--background-colour);
+}
+
+[data-theme='srcery'] .ctas a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+[data-theme='srcery'] .ctas a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter_hover);
+  color: var(--secondary-colour);
+}
+
+[data-theme='srcery'] .settings_button a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--background-colour);
+  gap: 8px;
+  padding: 26px;
+}
+
+[data-theme='srcery'] .settings_button a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+[data-theme='srcery'] .settings_button a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter_hover);
+  color: var(--secondary-colour);
+}
+
+[data-theme='srcery'] .settings_button a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--background-colour);
+}
+
+[data-theme='srcery'] .contact_options a.major {
+  border-color: var(--secondary-colour);
+  background: var(--secondary-colour);
+  color: var(--background-colour);
+  gap: 8px;
+  padding: 26px;
+}
+
+[data-theme='srcery'] .contact_options a.major .inverting{
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter);
+  color: var(--tertiary-colour);
+}
+
+/* for the SVG */
+[data-theme='srcery'] .contact_options a.major:hover .inverting {
+  transition:
+    background 0.1s,
+    color 0.1s,
+    border-color 0.1s;
+  filter: var(--major_inverting_filter_hover);
+  color: var(--secondary-colour);
+}
+
+[data-theme='srcery'] .contact_options a.major:hover {
+  border-color: var(--tertiary-colour);
+  background: var(--tertiary-colour);
+  color: var(--background-colour);
+}
+

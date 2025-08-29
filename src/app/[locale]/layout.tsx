@@ -4,8 +4,10 @@ import styles from "./themes/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-import { ThemeProvider } from '@designcise/next-theme-toggle';
-import { themes } from '@designcise/next-theme-toggle/server';
+// import { ThemeProvider } from '@designcise/next-theme-toggle';
+// import { themes } from '@designcise/next-theme-toggle/server';
+
+import { ThemeProvider } from "../components/ThemeProvider";
 
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
@@ -45,7 +47,11 @@ export default async function LocaleLayout({children}: {
       
       <body>
         <NextIntlClientProvider>
-          <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
+          <ThemeProvider 
+            defaultTheme="light"
+            enableColorScheme
+            themes={['light', 'dark', 'autumn', 'azure', 'srcery']}
+          >
             <main className={styles.main}>
               <div className={styles.header}>
                 <div className={styles.ctas}>

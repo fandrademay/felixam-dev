@@ -21,6 +21,8 @@
   },
   "Settings": {
     "title": "Gosodiadau",
+    "theme": "Thema",
+    "language": "Ieithoedd",
     "declaration_start": "Adeiladwyd y wefan hon gyda ",
     "declaration_nextjs": "Next.js",
     "declaration_mid": " mewn ",

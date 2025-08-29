@@ -11,9 +11,6 @@
   --major_inverting_filter_hover: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
   --minor_inverting_filter: invert(35%) sepia(17%) saturate(6309%) hue-rotate(344deg) brightness(91%) contrast(88%);
   --minor_inverting_filter_hover: invert(93%) sepia(11%) saturate(5067%) hue-rotate(319deg) brightness(96%) contrast(90%);
-  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
-  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
-  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
 
   --background: var(--background-colour);
   --foreground: var(--secondary-colour);
@@ -35,9 +32,93 @@
 
   --minor_inverting_filter: invert(66%) sepia(21%) saturate(1060%) hue-rotate(354deg) brightness(102%) contrast(91%);
   --minor_inverting_filter_hover: invert(31%) sepia(29%) saturate(1868%) hue-rotate(169deg) brightness(95%) contrast(86%);
-  --minor_filter: brightness(0) saturate(100%) invert(77%) sepia(42%) saturate(657%) hue-rotate(332deg) brightness(97%) contrast(94%);
-  --minor_filter_hover: invert(89%) sepia(100%) saturate(46%) hue-rotate(326deg) brightness(111%) contrast(111%);
-  --white_filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(187deg) brightness(105%) contrast(101%);
+
+  background: var(--background-colour)
+}
+
+[data-theme='autumn'] body {
+  --background-colour: #141c0e;
+  --secondary-colour: #cd5a01;
+  --tertiary-colour: #DBBA79;
+  --quaternary-colour: #34b7d3;
+
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
+
+  --major_inverting_filter: invert(82%) sepia(30%) saturate(596%) hue-rotate(349deg) brightness(93%) contrast(84%);
+  --major_inverting_filter_hover: invert(43%) sepia(72%) saturate(4455%) hue-rotate(15deg) brightness(93%) contrast(99%);
+
+  --minor_inverting_filter: invert(43%) sepia(72%) saturate(4455%) hue-rotate(15deg) brightness(93%) contrast(99%);
+  --minor_inverting_filter_hover: invert(82%) sepia(30%) saturate(596%) hue-rotate(349deg) brightness(93%) contrast(84%);
+
+  background: var(--background-colour)
+}
+
+[data-theme='azure'] body {
+  --background-colour: #017579;
+  --secondary-colour: #DBBA79;
+  --tertiary-colour: #DF4701;
+  --quaternary-colour: #DF4701;
+
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
+
+  --major_inverting_filter: invert(29%) sepia(42%) saturate(3542%) hue-rotate(4deg) brightness(100%) contrast(99%);
+  --major_inverting_filter_hover: invert(83%) sepia(26%) saturate(642%) hue-rotate(351deg) brightness(92%) contrast(86%);
+
+  --minor_inverting_filter: invert(83%) sepia(26%) saturate(642%) hue-rotate(351deg) brightness(92%) contrast(86%);
+  --minor_inverting_filter_hover: invert(29%) sepia(42%) saturate(3542%) hue-rotate(4deg) brightness(100%) contrast(99%);
+
+  background: var(--background-colour)
+}
+
+[data-theme='srcery'] body {
+  --srcery-black:          #1C1B19;
+  --srcery-red:            #EF2F27;
+  --srcery-green:          #519F50;
+  --srcery-yellow:         #FBB829;
+  --srcery-blue:           #2C78BF;
+  --srcery-magenta:        #E02C6D;
+  --srcery-cyan:           #0AAEB3;
+  --srcery-white:          #BAA67F;
+  --srcery-bright-black:   #918175;
+  --srcery-bright-red:     #F75341;
+  --srcery-bright-green:   #98BC37;
+  --srcery-bright-yellow:  #FED06E;
+  --srcery-bright-blue:    #68A8E4;
+  --srcery-bright-magenta: #FF5C8F;
+  --srcery-bright-cyan:    #2BE4D0;
+  --srcery-bright-white:   #FCE8C3;
+  --srcery-orange:         #FF5F00;
+  --srcery-bright-orange:  #FF8700;
+  --srcery-teal:           #008080;
+  --srcery-hard-black:     #121212;
+  --srcery-xgray1:         #262626;
+  --srcery-xgray2:         #303030;
+  --srcery-xgray3:         #3A3A3A;
+  --srcery-xgray4:         #444444;
+  --srcery-xgray5:         #4E4E4E;
+  --srcery-xgray6:         #585858;
+  --srcery-xgray7:         #626262;
+  --srcery-xgray8:         #6C6C6C;
+  --srcery-xgray9:         #767676;
+  --srcery-xgray10:        #808080;
+  --srcery-xgray11:        #8A8A8A;
+  --srcery-xgray12:        #949494;
+
+  --background-colour: var(--srcery-black);
+  --secondary-colour: var(--srcery-white);
+  --tertiary-colour: var(--srcery-bright-white);
+  --quaternary-colour: var(--srcery-orange);
+
+  --background: var(--background-colour);
+  --foreground: var(--secondary-colour);
+
+  --major_inverting_filter: invert(34%) sepia(98%) saturate(1235%) hue-rotate(360deg) brightness(106%) contrast(108%);
+  --major_inverting_filter_hover: invert(34%) sepia(98%) saturate(1235%) hue-rotate(360deg) brightness(106%) contrast(108%);
+
+  --minor_inverting_filter: invert(34%) sepia(98%) saturate(1235%) hue-rotate(360deg) brightness(106%) contrast(108%);
+  --minor_inverting_filter_hover: invert(34%) sepia(98%) saturate(1235%) hue-rotate(360deg) brightness(106%) contrast(108%);
 
   background: var(--background-colour)
 }

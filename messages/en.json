@@ -21,6 +21,8 @@
   },
   "Settings": {
     "title": "Settings",
+    "theme": "Theme",
+    "language": "Language",
     "declaration_start": "This website was built with ",
     "declaration_nextjs": "Next.js",
     "declaration_mid": " in ",
