@@ -6,12 +6,9 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 function ThemeToggles() {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-  // The active theme is not available on the server.
-  // If you have styling that is conditionally applied based on the active-theme,
-  // you have to await the mounted state before rendering the active theme.
-  useEffect(() => setMounted(true), [])
+  const { setTheme } = useTheme()
+  const [ setMounted ] = useState(false)
+  // useEffect(() => setMounted(true), [])
 
   const t = useTranslations('ToggleThemeButton');
 
