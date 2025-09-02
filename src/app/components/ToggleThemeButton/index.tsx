@@ -3,12 +3,9 @@
 import { useTranslations } from "next-intl";
 import styles from "../../../app/[locale]/themes/page.module.css";
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
 
 function ThemeToggles() {
   const { setTheme } = useTheme()
-  const [ setMounted ] = useState(false)
-  // useEffect(() => setMounted(true), [])
 
   const t = useTranslations('ToggleThemeButton');
 
