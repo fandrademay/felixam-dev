@@ -35,7 +35,12 @@
     "webring": "Gwe-gylch Aber"
   },
   "ToggleThemeButton": {
-    "content": "Toglo'r Thema"
+    "content": "Toglo'r Thema",
+    "light": "Golau",
+    "dark": "Tywyll",
+    "autumn": "Hydref",
+    "azure": "Glas y Nen",
+    "srcery": "srcery"
   },
   "ToggleLocaleButton": {
     "content": "Switch to English"

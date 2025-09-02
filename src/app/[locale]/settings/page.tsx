@@ -9,7 +9,6 @@ import { setRequestLocale } from 'next-intl/server';
 import ToggleThemeButton from '../../components/ToggleThemeButton';
 import ToggleLocaleButton from '@/app/components/ToggleLocaleButton';
 
-
 export default function Settings({params}:{params: Promise<{locale: string}>;}) {
   const { locale } = use(params);
  
@@ -21,11 +20,11 @@ export default function Settings({params}:{params: Promise<{locale: string}>;}) 
         <h1>{t('title')}</h1>
           <div className={styles.settings}>
             <h2>{t('theme')}</h2>
-              <hr/>
+              <hr className={styles.hr}/>
               <ToggleThemeButton/>
 
             <h2>{t('language')}</h2>
-              <hr/>
+              <hr className={styles.hr}/>
               <ToggleLocaleButton/>
           </div>
         <p>{t('declaration_start')}<a href="https://nextjs.org/">{t('declaration_nextjs')}</a>{t('declaration_mid')}<a href="https://www.typescriptlang.org/">{t('declaration_ts')}</a>.</p>

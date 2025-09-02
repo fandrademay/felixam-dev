@@ -1,29 +1,6 @@
-// 'use client'
-
-// import { useTheme } from '@designcise/next-theme-toggle';
-// import Image from 'next/image';
-
-
-// import { useTranslations } from 'next-intl';
-
-
-// export default function ToggleThemeButton() {
-//   const { toggleTheme } = useTheme()
-//   const t = useTranslations('ToggleThemeButton')
-
-//   return (
-//     <div className={styles.settings_button}>
-//       <a className={styles.major} onClick={toggleTheme}>
-//           <Image className={styles.inverting} src="/images/icons/theme.svg" 
-//                   width={20} height={20} alt="Change Theme"/>
-//             {t('content')}
-//       </a>
-//     </div>
-//   );
-// }
-
 'use client'
 
+import { useTranslations } from "next-intl";
 import styles from "../../../app/[locale]/themes/page.module.css";
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
@@ -36,12 +13,14 @@ function ThemeToggles() {
   // you have to await the mounted state before rendering the active theme.
   useEffect(() => setMounted(true), [])
 
+  const t = useTranslations('ToggleThemeButton');
+
   const themeMapping: Record<string, string> = {
-    'light': 'Light',
-    'dark': 'Dark',
-    'autumn': 'Autumn',
-    'azure': 'Azure',
-    'srcery': 'Srcery'
+    'light': t.raw('light'),
+    'dark': t.raw('dark'),
+    'autumn': t.raw('autumn'),
+    'azure': t.raw('azure'),
+    'srcery': t.raw('srcery'),
   }
 
   return (

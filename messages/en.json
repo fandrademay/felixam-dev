@@ -35,7 +35,12 @@
     "webring": "Aber Webring"
   },
   "ToggleThemeButton": {
-    "content": "Toggle Theme"
+    "content": "Toglo'r Thema",
+    "light": "Light",
+    "dark": "Dark",
+    "autumn": "Autumn",
+    "azure": "Azure",
+    "srcery": "Srcery"
   },
   "ToggleLocaleButton": {
     "content": "Newid i Gymraeg"
