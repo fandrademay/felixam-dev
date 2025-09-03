@@ -1,11 +1,13 @@
-import "./globals.css";
-import styles from "./page.module.css";
+import "./themes/globals.css";
+import styles from "./themes/page.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
 
-import { ThemeProvider } from '@designcise/next-theme-toggle';
-import { themes } from '@designcise/next-theme-toggle/server';
+// import { ThemeProvider } from '@designcise/next-theme-toggle';
+// import { themes } from '@designcise/next-theme-toggle/server';
+
+import { ThemeProvider } from "../components/ThemeProvider";
 
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
@@ -45,7 +47,11 @@ export default async function LocaleLayout({children}: {
       
       <body>
         <NextIntlClientProvider>
-          <ThemeProvider storageKey="user-pref" defaultTheme={themes.light.type}>
+          <ThemeProvider 
+            defaultTheme="light"
+            enableColorScheme
+            themes={['light', 'dark', 'autumn', 'azure', 'srcery']}
+          >
             <main className={styles.main}>
               <div className={styles.header}>
                 <div className={styles.ctas}>
@@ -68,7 +74,6 @@ export default async function LocaleLayout({children}: {
                   </Link>
 
                   <div className={styles.otherButtons}>
-                  
                     <Link className={styles.other} href="https://www.linkedin.com/in/felixAmay" 
                           target="_blank" rel="noopener noreferrer">
                       <Image src="/images/icons/linkedin-White-34.png" width={20} height={20} alt="LinkedIn"/>
@@ -79,7 +84,7 @@ export default async function LocaleLayout({children}: {
                       <Image src="/images/icons/github-mark-white.svg" width={20} height={20} alt="GitHub"/>
                     </Link>
 
-                    <Link className={styles.other} href={`/${await getLocale()}/`}>
+                    <Link className={styles.other} href={`/${await getLocale()}/`} prefetch={true} replace={true}>
                       <Image src="/images/icons/home.svg" width={20} height={20} alt="Home"/>
                     </Link>
                   </div>
@@ -101,8 +106,9 @@ export default async function LocaleLayout({children}: {
                             width={24} height={24} alt="Posts"/>
                   </Link>
 
-                  <Link className={styles.other} href={`/${currentLocale}/`}>
-                    <Image src="/images/icons/home.svg" width={24} height={24} alt="Home"/>
+                  <Link className={styles.other} href={`/${await getLocale()}/`} prefetch={true} replace={true}>
+                    <Image className={styles.inverting} src="/images/icons/home_mobile.svg" 
+                            width={24} height={24} alt="Home"/>
                   </Link>
                 </div>
               </div>

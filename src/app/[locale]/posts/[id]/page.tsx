@@ -1,5 +1,5 @@
-import styles from "../../page.module.css";
-import '../../fonts.css';
+import styles from "../../themes/page.module.css";
+import '../../themes/fonts.css';
 
 import Link from "next/link";
 
@@ -85,10 +85,10 @@ export default async function PostsPage({ params }: { params: Promise<{ id: stri
               <h1> &gt; </h1>
             </Link>
           </div>
-          <hr></hr>
+          <hr className={styles.hr}/>
           <h3>{post.description}</h3>
           <h3><i>Entered: {post.date?.toISOString().substring(0,10)}</i></h3>
-          <hr></hr>
+          <hr className={styles.hr}/>
         </div>
 
           <div dangerouslySetInnerHTML={{ __html: htmlContent }} className={styles.postContent}/>

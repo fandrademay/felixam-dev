@@ -1,4 +1,4 @@
-import '../fonts.css';
+import '../themes/fonts.css';
 import fs from 'fs'
 import path from 'path'
 import matter from  'gray-matter'

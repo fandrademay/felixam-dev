@@ -1,7 +1,7 @@
 {
   "Home": {
     "title": "Felix Andrade May",
-    "content": "Graddedig o Cyfrifadureg o Brifysgol Aberystwyth"
+    "content": "Swyddog Rhaglen TGCh yn Cyngor Dosbarth Dde Hams & Cyngor Bwrdeistref Gorllewin Dyfnaint"
   },
   "Contact": {
     "title": "Cysylltu",
@@ -21,6 +21,8 @@
   },
   "Settings": {
     "title": "Gosodiadau",
+    "theme": "Thema",
+    "language": "Ieithoedd",
     "declaration_start": "Adeiladwyd y wefan hon gyda ",
     "declaration_nextjs": "Next.js",
     "declaration_mid": " mewn ",
@@ -33,7 +35,12 @@
     "webring": "Gwe-gylch Aber"
   },
   "ToggleThemeButton": {
-    "content": "Toglo'r Thema"
+    "content": "Toglo'r Thema",
+    "light": "Golau",
+    "dark": "Tywyll",
+    "autumn": "Hydref",
+    "azure": "Glas y Nen",
+    "srcery": "srcery"
   },
   "ToggleLocaleButton": {
     "content": "Switch to English"
